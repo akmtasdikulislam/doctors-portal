@@ -1,0 +1,25 @@
+:root {
+    --black-color     : #373737;
+    --primary-color   : #15D2AE;
+    --quaternary-color: #F0B037;
+    --quinary-color   : #E01343;
+    --secondary-color : #394155;
+    --tertiary-color  : #11CEEA;
+
+    /* Base font size */
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin    : 0;
+    padding   : 0;
+}
+
+body {
+    font-family: "Sarabun", system-ui;
+    min-height : 100vh;
+    min-width  : 100vw;
+    overflow-x : hidden;
+    color      : var(--black-color);
+}
