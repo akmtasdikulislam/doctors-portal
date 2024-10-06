@@ -96,34 +96,47 @@ To be written soon.
 
 <pre>
 doctors-portal/
+├── node_modules/
 ├── public/
-│   ├── index.html
-│   ├── favicon.ico
-│   └── manifest.json
 ├── src/
+│   ├── assets/
+│   │   ├── icons/
+│   │   ├── images/
+│   │   │   ├── appointment.png
+│   │   │   ├── bg.png
+│   │   │   ├── cavity.png
+│   │   │   ├── chair.png
+│   │   │   ├── doctor-small.png
+│   │   │   ├── doctor.png
+│   │   │   ├── dribble_1.gif
+│   │   │   ├── fluoride.png
+│   │   │   ├── footer.png
+│   │   │   ├── login.png
+│   │   │   ├── people1.png
+│   │   │   ├── people2.png
+│   │   │   ├── people3.png
+│   │   │   ├── treatment.png
+│   │   │   └── whitening.png
+│   │   ├── logo/
+│   │   │   ├── logo-main.png
+│   │   │   ├── logo.ai
+│   │   │   ├── logo.ico
+│   │   │   ├── logo.png
+│   │   │   └── logo.svg
+│   ├── screenshots/
 │   ├── components/
-│   │   ├── Header/
-│   │   ├── Footer/
-│   │   ├── Appointment/
-│   │   ├── DoctorList/
-│   │   └── PatientDashboard/
 │   ├── pages/
-│   │   ├── Home/
-│   │   ├── Appointments/
-│   │   ├── Doctors/
-│   │   └── PatientProfile/
-│   ├── services/
-│   │   ├── api.js
-│   │   └── auth.js
-│   ├── utils/
-│   │   └── helpers.js
-│   ├── styles/
-│   │   └── global.css
-│   ├── App.js
-│   └── index.js
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   └── main.jsx
+├── .gitignore
+├── desktop.ini
+├── doctors-portal.fig
+├── eslint.config.js
+├── index.html
 ├── package.json
 ├── README.md
-└── .gitignore
+└── yarn.lock
 </pre>
 
 ## Contributing
@@ -152,7 +165,7 @@ MIT
 
 ## Acknowledgements
 
-- [Medical team icons created by HAJICON - Flaticon](https://www.flaticon.com/free-icons/medical-team) - The logo used in this project is created by HAJICON - Flaticon.
+- [Medical team icons created by HAJICON - Flaticon](https://www.flaticon.com/free-icons/medical-team) - The icon used in the logo of this project is created by HAJICON - Flaticon.
 
 ## Author
 
@@ -161,12 +174,13 @@ This project was developed by Akm Tasdikul Islam.
 ### Contact Information
 
 - **Email:** akmtasdikulislam@gmail.com
-- **GitHub:** [akmtasdikulislam](https://github.com/akmtasdikulislam)
+- **GitHub:** [Akm Tasdikul Islam](https://github.com/akmtasdikulislam)
 
 ## Dependencies
 
 - react: ^18.3.1
 - react-dom: ^18.3.1
+- react-router-dom: ^6.26.2
 
 ## Browser Compatibility
 
