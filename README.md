@@ -127,6 +127,8 @@ doctors-portal/
 │   ├── components/
 │   │   ├── Header/
 │   │   |   └── Header.jsx
+│   │   ├── NavBar/
+│   │   |   └── NavBar.jsx
 │   ├── pages/
 │   │   ├── Home/
 │   │   |   └── Home.jsx
