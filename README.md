@@ -171,8 +171,6 @@ MIT
 
 ## Acknowledgements
 
-- [Medical team icons created by HAJICON - Flaticon](https://www.flaticon.com/free-icons/medical-team) - The icon used in the logo of this project is created by HAJICON - Flaticon.
-
 ## Author
 
 This project was developed by Akm Tasdikul Islam.
