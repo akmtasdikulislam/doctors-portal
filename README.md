@@ -126,9 +126,11 @@ doctors-portal/
 │   ├── screenshots/
 │   ├── components/
 │   ├── pages/
-│   │   ├── App.css
-│   │   ├── App.jsx
-│   │   └── main.jsx
+│   │   ├── Home/
+│   │   |   └── Home.jsx
+│   ├── App.css
+│   ├── App.jsx
+│   └── main.jsx
 ├── .gitignore
 ├── desktop.ini
 ├── doctors-portal.fig
