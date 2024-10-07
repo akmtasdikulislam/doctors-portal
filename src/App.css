@@ -1,10 +1,28 @@
+/* 
+CSS Heading/Title Levels
+/* • Level 1 ⇒ ===== Pages ===== */
+/* • Level 2 ⇒ >>> Components <<< */
+/* • Level 3 ⇒ ** Group ** */
+/* • Level 4 ⇒  Selector  */
+*/
+
+/* ===== General Styles ===== */
 :root {
-    --black-color     : #373737;
-    --primary-color   : #15D2AE;
-    --quaternary-color: #F0B037;
-    --quinary-color   : #E01343;
-    --secondary-color : #394155;
-    --tertiary-color  : #11CEEA;
+    /* Colors */
+    --aqua-500: #15d2ae;
+    --aqua-600: #14c8a7;
+    --aqua-700: #12ba9b;
+
+    --black-400: #394155;
+    --black-500: #373737;
+
+    --cyan-500: #11ceea;
+    --cyan-600: #11c3df;
+    --cyan-700: #10b7d1;
+
+    --red-500   : #e01343;
+    --white-500 : #ffffff;
+    --yellow-500: #f0b037;
 
     /* Base font size */
     font-size: 16px;
@@ -17,9 +35,123 @@
 }
 
 body {
+    color      : var(--black-400);
     font-family: "Sarabun", system-ui;
+    font-weight: 500;
     min-height : 100vh;
     min-width  : 100vw;
     overflow-x : hidden;
-    color      : var(--black-color);
+}
+
+/* ** Links ** */
+a {
+    color          : inherit;
+    text-decoration: none;
+}
+
+/* ** Headings ** */
+h1 {
+    font-size  : 2.986em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.488em;
+}
+
+h3 {
+    font-size: 2.074em;
+}
+
+h4 {
+    font-size: 1.728em;
+}
+
+h5 {
+    font-size: 1.44em;
+}
+
+h6 {
+    font-size: 1.2em;
+}
+
+/* ** Body Texts ** */
+p {
+    font-size: 1em;
+}
+
+.small-text {
+    font-size: 0.833em;
+}
+
+.caption-text {
+    font-size: 0.694em;
+}
+
+/* ** Buttons ** */
+
+/* Button DEFAULT State */
+button,
+.btn {
+    background-image: linear-gradient(to right, var(--aqua-500), var(--cyan-500));
+    color           : var(--white-500);
+    text-transform  : uppercase;
+}
+
+/* Button HOVER State */
+button:hover,
+.btn:hover {
+    background-image: linear-gradient(to right, var(--aqua-600), var(--cyan-600));
+    color           : var(--white-500);
+    transition      : all 0.3s ease-in-out;
+}
+
+/* Button ACTIVE State */
+.btn:active,
+button:active {
+    background-image: linear-gradient(to right, var(--aqua-700), var(--cyan-700));
+    color           : var(--white-500);
+    outline         : 0;
+    transition      : all 0.1s ease-in-out;
+}
+
+
+/* ===== Home Page ===== */
+/* >>> Header Component <<< */
+header {
+    background-image: url("./assets/images/bg.png");
+    background-size : cover;
+    height          : 100vh;
+}
+
+.hero-section p {
+    margin-bottom: 1.5em;
+    margin-top   : 1.25em;
+}
+
+/* >>> NavBar Component <<< */
+.navbar-brand {
+    height: 2.75em;
+}
+
+.navbar-brand .logo {
+    height: 100%;
+}
+
+/* >>> InfoCard Component <<< */
+.info-card {
+    border-radius: 0.5em;
+    height       : 8em;
+}
+
+.info-primary {
+    background-image: linear-gradient(to right, var(--aqua-500), var(--cyan-500));
+}
+
+.info-dark {
+    background-color: var(--black-color);
+}
+
+.info-icon {
+    height: 4.5em;
 }
