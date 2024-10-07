@@ -125,6 +125,8 @@ doctors-portal/
 │   │   │   └── logo.svg
 │   ├── screenshots/
 │   ├── components/
+│   │   ├── Header/
+│   │   |   └── Header.jsx
 │   ├── pages/
 │   │   ├── Home/
 │   │   |   └── Home.jsx
