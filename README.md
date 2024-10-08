@@ -126,6 +126,8 @@ doctors-portal/
 │   │   │   └── logo.svg
 │   ├── screenshots/
 │   ├── components/
+│   │   ├── DentalCareService/
+│   │   |   └── DentalCareService.jsx
 │   │   ├── Header/
 │   │   |   └── Header.jsx
 │   │   ├── InfoCard/
