@@ -132,6 +132,8 @@ doctors-portal/
 │   │   |   └── Header.jsx
 │   │   ├── InfoCard/
 │   │   |   └── InfoCard.jsx
+│   │   ├── MakeAppointment/
+│   │   |   └── MakeAppointment.jsx
 │   │   ├── NavBar/
 │   │   |   └── NavBar.jsx
 │   │   ├── ServiceCard/
