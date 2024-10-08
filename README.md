@@ -15,6 +15,7 @@ A comprehensive web application designed to streamline doctor-patient interactio
 - [Testing](#testing)
 - [Deployment](#deployment)
 - [License](#license)
+- [Useful Resources](#useful-resources)
 - [Acknowledgements](#acknowledgements)
 - [Author](#author)
 - [Dependencies](#dependencies)
@@ -175,7 +176,15 @@ npm run deploy
 
 MIT
 
+## Useful Resources
+
+- [100 CSS Box Shadow Examples](https://htmlcssfreebies.com/css-box-shadow-examples/) - The box-shadow used in this project is taken from this link.
+
+- [Typescale](https://typescale.com/) - The font-sizes (Minor Third Ratio)for headings and other texts are generated using Typescale.
+
 ## Acknowledgements
+
+- [Icons8](https://icons8.com/) - The hospital icon used as the logo is taken from Icons8.
 
 ## Author
 
