@@ -15,6 +15,8 @@
 import { useEffect } from "react"; // Hook used to set document title on component mount
 
 // ** Component imports **
+
+import DentalCareService from "../../components/DentalCareService/DentalCareService"; // Displays dental care services on the home page
 import Header from "../../components/Header/Header"; // Renders the header section of the home page
 import Services from "../../components/Services/Services"; // Displays the services section on the home page
 
@@ -33,6 +35,8 @@ const Home = () => {
       <Header />
       {/* Render the Services component */}
       <Services />
+      {/* Render the DentalCareService component */}
+      <DentalCareService />
     </main>
   );
 };
