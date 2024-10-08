@@ -131,6 +131,8 @@ doctors-portal/
 │   │   |   └── InfoCard.jsx
 │   │   ├── NavBar/
 │   │   |   └── NavBar.jsx
+│   │   ├── Services/
+│   │   |   └── Services.jsx
 │   ├── pages/
 │   │   ├── Home/
 │   │   |   └── Home.jsx
@@ -223,3 +225,9 @@ To be written soon.
 ## Related Projects
 
 To be written soon.
+
+CSS Heading/Title Levels
+• Level 1 ⇒ ===== Pages =====
+• Level 2 ⇒ >>> Components <<<
+• Level 3 ⇒ ** Group **
+• Level 4 ⇒ Selector
