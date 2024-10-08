@@ -13,7 +13,10 @@
 
 // ** React related imports **
 import { useEffect } from "react"; // Hook used to set document title on component mount
-import Header from "../../components/Header/Header";
+
+// ** Component imports **
+import Header from "../../components/Header/Header"; // Renders the header section of the home page
+import Services from "../../components/Services/Services"; // Displays the services section on the home page
 
 const Home = () => {
   // Use the useEffect hook to perform side effects in the component
@@ -28,6 +31,8 @@ const Home = () => {
     <main id="home">
       {/* Render the Header component */}
       <Header />
+      {/* Render the Services component */}
+      <Services />
     </main>
   );
 };
