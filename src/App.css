@@ -189,3 +189,27 @@ header::after {
 .service-image {
     height: 5em;
 }
+
+/* >>> MakeAppointment Component <<< */
+.appointment-section {
+    background-image: url("./assets/images/appointment.png");
+    background-size : cover;
+    height          : 30em;
+}
+
+.appointment-container {
+    height  : 100%;
+    position: relative;
+}
+
+.appointment-img {
+    bottom  : 0;
+    height  : 125%;
+    left    : 0;
+    position: absolute;
+    width   : auto;
+}
+
+.appointment-container h6 {
+    color: var(--aqua-500);
+}
