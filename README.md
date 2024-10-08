@@ -131,6 +131,8 @@ doctors-portal/
 │   │   |   └── InfoCard.jsx
 │   │   ├── NavBar/
 │   │   |   └── NavBar.jsx
+│   │   ├── ServiceCard/
+│   │   |   └── ServiceCard.jsx
 │   │   ├── Services/
 │   │   |   └── Services.jsx
 │   ├── pages/
