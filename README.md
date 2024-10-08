@@ -140,6 +140,8 @@ doctors-portal/
 │   │   |   └── ServiceCard.jsx
 │   │   ├── Services/
 │   │   |   └── Services.jsx
+│   │   ├── TestimonialCard/
+│   │   |   └── TestimonialCard.jsx
 │   │   ├── Testimonials/
 │   │   |   └── Testimonials.jsx
 │   ├── pages/
