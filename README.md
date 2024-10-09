@@ -151,6 +151,8 @@ doctors-portal/
 │   │   ├── Testimonials/
 │   │   |   └── Testimonials.jsx
 │   ├── pages/
+│   │   ├── Appointment/
+│   │   |   └── Appointment.jsx
 │   │   ├── Home/
 │   │   |   └── Home.jsx
 │   ├── App.css
