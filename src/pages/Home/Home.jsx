@@ -20,6 +20,7 @@ import DentalCareService from "../../components/DentalCareService/DentalCareServ
 import Header from "../../components/Header/Header"; // Renders the header section of the home page
 import MakeAppointment from "../../components/MakeAppointment/MakeAppointment"; // Displays appointment booking section on the home page
 import Services from "../../components/Services/Services"; // Displays the services section on the home page
+import Testimonials from "../../components/Testimonials/Testimonials"; // Displays customer reviews and feedback on the home page
 const Home = () => {
   // Use the useEffect hook to perform side effects in the component
   useEffect(() => {
@@ -39,6 +40,8 @@ const Home = () => {
       <DentalCareService />
       {/* Render the MakeAppointment component */}
       <MakeAppointment />
+      {/* Render the Testimonials component */}
+      <Testimonials />
     </main>
   );
 };
