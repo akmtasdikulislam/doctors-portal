@@ -90,6 +90,10 @@ p {
     font-size: 0.694em;
 }
 
+.sub-heading {
+    color: var(--aqua-500);
+}
+
 /* ** Buttons ** */
 
 /* Button DEFAULT State */
@@ -174,11 +178,6 @@ header::after {
     height: 4.5em;
 }
 
-/* >>> Services Component <<< */
-.services-section>div>h6 {
-    color: var(--aqua-500);
-}
-
 /* >>> ServiceCard Component <<< */
 .service-card {
     border-radius: 0.5em;
@@ -210,6 +209,28 @@ header::after {
     width   : auto;
 }
 
-.appointment-container h6 {
-    color: var(--aqua-500);
+/* >>> Testimonials Component <<< */
+.testimonials-section {
+    background-image   : url("./assets/images/quote.png");
+    background-position: top right;
+    background-repeat  : no-repeat;
+}
+
+/* >>> TestimonialCard Component <<< */
+.testimonial-card {
+    border-radius: 0.5em;
+    /* UI Soft */
+    box-shadow   : 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+    height       : 21.5em;
+}
+
+.testimonial-card .author-photo {
+    border       : 3px solid var(--aqua-500);
+    border-radius: 50%;
+    padding      : 2px;
+    width        : 4.5em;
+}
+
+.testimonial-card .author-info p {
+    margin-bottom: 0;
 }
