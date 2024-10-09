@@ -39,8 +39,13 @@ body {
 
 /* ** Links ** */
 a {
-    color          : inherit;
+    color          : var(--black-400);
     text-decoration: none;
+}
+
+a:hover {
+    color     : var(--aqua-500);
+    transition: all 0.3s ease-in-out;
 }
 
 /* ** Headings ** */
@@ -272,4 +277,11 @@ header::after {
 .form-error .form-error-message {
     margin : 0;
     padding: 0;
+}
+
+/* >>> Footer Component <<< */
+.footer-section {
+    background-image : url("./assets/images/footer.png");
+    background-repeat: no-repeat;
+    background-size  : cover;
 }
