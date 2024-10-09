@@ -52,7 +52,7 @@ const Services = () => {
   return (
     <section className="services-section my-md-5">
       {/* Container for the services section with margin */}
-      <div className="text-center my-md-5 pt-md-5 section-header">
+      <div className="text-center my-md-5 py-md-5 section-header">
         {/* Centered container for section title */}
         <h6 className="sub-heading">OUR SERVICES</h6>
         {/* Subtitle for the services section */}
