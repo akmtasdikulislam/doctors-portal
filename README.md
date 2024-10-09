@@ -126,6 +126,8 @@ doctors-portal/
 │   │   │   └── logo.svg
 │   ├── screenshots/
 │   ├── components/
+│   │   ├── AppointmentHeader/
+│   │   |   └── AppointmentHeader.jsx
 │   │   ├── ContactUs/
 │   │   |   └── ContactUs.jsx
 │   │   ├── DentalCareService/
