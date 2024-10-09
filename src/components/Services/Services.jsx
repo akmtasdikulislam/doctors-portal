@@ -52,10 +52,12 @@ const Services = () => {
   return (
     <section className="services-section my-md-5">
       {/* Container for the services section with margin */}
-      <div className="text-center my-md-5 pt-md-5">
+      <div className="text-center my-md-5 pt-md-5 section-header">
         {/* Centered container for section title */}
-        <h6>OUR SERVICES</h6> {/* Subtitle for the services section */}
-        <h3>Services We Provide</h3> {/* Main title for the services section */}
+        <h6 className="sub-heading">OUR SERVICES</h6>
+        {/* Subtitle for the services section */}
+        <h3>Services We Provide</h3>
+        {/* Main title for the services section */}
       </div>
       <div className="services-container d-flex justify-content-center gap-5 w-75 mx-md-auto">
         {/* Container for service cards with flexbox layout */}
