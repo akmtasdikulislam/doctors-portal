@@ -13,6 +13,7 @@
     --cyan-600: #11c3df;
     --cyan-700: #10b7d1;
 
+    --red-200   : #FBD3DC;
     --red-500   : #e01343;
     --white-500 : #ffffff;
     --yellow-500: #f0b037;
@@ -221,7 +222,7 @@ header::after {
     border-radius: 0.5em;
     /* UI Soft */
     box-shadow   : 0 7px 30px -10px rgba(150, 170, 180, 0.5);
-    height       : 21.5em;
+    min-height   : 21.5em;
 }
 
 .testimonial-card .author-photo {
@@ -233,4 +234,42 @@ header::after {
 
 .testimonial-card .author-info p {
     margin-bottom: 0;
+}
+
+/* >>> ContactUs Component <<< */
+.contact-us-section {
+    background-image: url("./assets/images/appointment.png");
+    background-size : cover;
+}
+
+.contact-us-section input,
+.contact-us-section textarea {
+    background-color: var(--white-500);
+    border          : 0;
+    border-radius   : .25em;
+    color           : var(--black-400);
+    outline         : 0;
+    padding         : 0.75em;
+}
+
+.contact-us-section textarea {
+    height: 10em;
+    resize: none;
+}
+
+.contact-us-section .submit-btn {
+    width: fit-content;
+}
+
+
+/* >>> FormError Component <<< */
+.form-error {
+    background-color: var(--red-200);
+    color           : var(--red-500);
+    font-weight     : 600;
+}
+
+.form-error .form-error-message {
+    margin : 0;
+    padding: 0;
 }
