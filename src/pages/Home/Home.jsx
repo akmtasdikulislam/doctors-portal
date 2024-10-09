@@ -18,6 +18,7 @@ import { useEffect } from "react"; // Hook used to set document title on compone
 
 import ContactUs from "../../components/ContactUs/ContactUs"; // Displays contact information and form on the home page
 import DentalCareService from "../../components/DentalCareService/DentalCareService"; // Displays dental care services on the home page
+import Footer from "../../components/Footer/Footer"; // Renders the footer section of the home page
 import Header from "../../components/Header/Header"; // Renders the header section of the home page
 import MakeAppointment from "../../components/MakeAppointment/MakeAppointment"; // Displays appointment booking section on the home page
 import Services from "../../components/Services/Services"; // Displays the services section on the home page
@@ -45,6 +46,8 @@ const Home = () => {
       <Testimonials />
       {/* Render the ContactUs component */}
       <ContactUs />
+      {/* Render the Footer component */}
+      <Footer />
     </main>
   );
 };
