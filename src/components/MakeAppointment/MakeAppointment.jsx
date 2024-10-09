@@ -28,9 +28,9 @@ const MakeAppointment = () => {
         {/* Container for appointment details with responsive column width and alignment */}
         <div className="appointment-details col-md-5 ms-md-auto">
           {/* Small heading for appointment section */}
-          <h6>Appointment</h6>
+          <h6 className="sub-heading">Appointment</h6>
           {/* Main heading for appointment section with white text and top margin */}
-          <h3 className="text-white mt-4">Make an Appointment Today</h3>
+          <h3 className="text-white mt-2">Make an Appointment Today</h3>
           {/* Paragraph with appointment description, white text, and vertical margin */}
           <p className="text-white my-4">
             It&apos;s quick and easy to schedule your visit with our experienced
