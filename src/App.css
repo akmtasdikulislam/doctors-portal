@@ -44,7 +44,7 @@ a {
 }
 
 a:hover {
-    color     : var(--aqua-500);
+    color     : var(--aqua-700);
     transition: all 0.3s ease-in-out;
 }
 
@@ -154,6 +154,12 @@ header::after {
 }
 
 /* >>> NavBar Component <<< */
+.navbar .active {
+    background-color: var(--black-400);
+    color           : var(--white-500) !important;
+    border-radius   : .25em;
+}
+
 .navbar-brand {
     height: 2.75em;
 }
@@ -162,6 +168,11 @@ header::after {
     height: 100%;
 }
 
+.nav-link:hover {
+    color: var(--aqua-700);
+}
+
+/* >>> Header Component <<< */
 .contact-information-section {
     z-index: 2;
 }
