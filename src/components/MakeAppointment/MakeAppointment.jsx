@@ -40,7 +40,7 @@ const MakeAppointment = () => {
             perfect time slot.
           </p>
           {/* Call-to-action button for starting the appointment process */}
-          <button className="btn">Get Started</button>
+          <button className="btn btn-primary">Get Started</button>
         </div>
       </div>
     </section>

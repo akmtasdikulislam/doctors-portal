@@ -65,7 +65,7 @@ const Header = () => {
             Experience top-quality dental care with our expert team. Schedule
             your appointment today for a brighter, healthier smile.
           </p>
-          <button className="btn">Get Started</button>
+          <button className="btn btn-primary">Get Started</button>
           {/* Call-to-action button */}
         </div>
         <div className="col-5 offset-1">

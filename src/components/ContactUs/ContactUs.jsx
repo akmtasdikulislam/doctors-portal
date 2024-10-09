@@ -98,7 +98,7 @@ const ContactUs = () => {
         {errors.message && <FormError errorMessage={errors.message.message} />}
 
         {/* Submit button for the form */}
-        <button type="submit" className="btn submit-btn mx-auto">
+        <button type="submit" className="btn submit-btn mx-auto btn-primary">
           Submit
         </button>
       </form>

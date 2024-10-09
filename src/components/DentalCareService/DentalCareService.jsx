@@ -44,7 +44,7 @@ const DentalCareService = () => {
             schedule and preferences.
           </p>
           {/* Call-to-action button */}
-          <button className="btn">Get Started</button>
+          <button className="btn btn-primary">Get Started</button>
         </div>
       </div>
     </section>

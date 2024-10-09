@@ -102,33 +102,32 @@ p {
 
 /* ** Buttons ** */
 
-/* Button DEFAULT State */
 button,
 .btn {
-    background-image: linear-gradient(to right, var(--aqua-500), var(--cyan-500));
-    color           : var(--white-500);
-    font-weight     : 600;
-    text-transform  : uppercase;
+    font-weight: 600;
 }
 
-/* Button HOVER State */
-button:hover,
-.btn:hover {
-    background-image: linear-gradient(to right, var(--aqua-600), var(--cyan-600));
+/* Button DEFAULT State */
+.btn-primary {
+    background-image: linear-gradient(to right, var(--aqua-500), var(--cyan-500));
+    border          : 0;
     color           : var(--white-500);
-    font-weight     : 600;
+    outline         : 0;
+    text-transform  : uppercase;
     transition      : all 0.3s ease-in-out;
 }
 
-/* Button ACTIVE State */
-.btn:active,
-button:active {
-    background-image: linear-gradient(to right, var(--aqua-700), var(--cyan-700));
+/* Button HOVER State */
+.btn-primary:hover {
+    background-image: linear-gradient(to right, var(--aqua-600), var(--cyan-600));
     color           : var(--white-500);
-    outline         : 0;
-    transition      : all 0.1s ease-in-out;
 }
 
+/* Button ACTIVE State */
+.btn-primary:active {
+    background-image: linear-gradient(to right, var(--aqua-700), var(--cyan-700));
+    color           : var(--white-500);
+}
 
 /* ===== Home Page ===== */
 /* >>> Header Component <<< */
