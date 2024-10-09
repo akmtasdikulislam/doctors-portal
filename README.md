@@ -130,6 +130,8 @@ doctors-portal/
 │   │   |   └── ContactUs.jsx
 │   │   ├── DentalCareService/
 │   │   |   └── DentalCareService.jsx
+│   │   ├── Footer/
+│   │   |   └── Footer.jsx
 │   │   ├── FormError/
 │   │   |   └── FormError.jsx
 │   │   ├── Header/
