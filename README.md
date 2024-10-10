@@ -235,6 +235,7 @@ This project was developed by Akm Tasdikul Islam.
 - react-calendar: ^5.0.0
 - react-dom: ^18.3.1
 - react-hook-form: ^7.53.0
+- react-modal: ^3.16.1
 - react-router-dom: ^6.26.2
 
 ## Browser Compatibility
