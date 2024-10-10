@@ -155,6 +155,7 @@ doctors-portal/
 │   │   ├── Testimonials/
 │   │   |   └── Testimonials.jsx
 │   ├── functions/
+│   │   ├── formatDate.js
 │   ├── pages/
 │   │   ├── Appointment/
 │   │   |   └── Appointment.jsx
