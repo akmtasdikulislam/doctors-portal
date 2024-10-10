@@ -132,6 +132,8 @@ doctors-portal/
 │   │   |   └── BookAppointment.jsx
 │   │   ├── BookAppointmentCard/
 │   │   |   └── BookAppointmentCard.jsx
+│   │   ├── BookAppointmentModal/
+│   │   |   └── BookAppointmentModal.jsx
 │   │   ├── ContactUs/
 │   │   |   └── ContactUs.jsx
 │   │   ├── DentalCareService/
