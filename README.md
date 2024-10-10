@@ -128,6 +128,8 @@ doctors-portal/
 │   ├── components/
 │   │   ├── AppointmentHeader/
 │   │   |   └── AppointmentHeader.jsx
+│   │   ├── BookAppointment/
+│   │   |   └── BookAppointment.jsx
 │   │   ├── ContactUs/
 │   │   |   └── ContactUs.jsx
 │   │   ├── DentalCareService/
