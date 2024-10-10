@@ -200,6 +200,16 @@ MIT
 
 - [Typescale](https://typescale.com/) - The font-sizes (Minor Third Ratio)for headings and other texts are generated using Typescale.
 
+- [Google Fonts](https://fonts.google.com/) - The font-family used in this project is taken from Google Fonts.
+
+- [Color Pedia | DopleyColors](https://colors.dopely.top/color-pedia) - The color palette (Shades & Tints) used in this project is taken from Color Pedia.
+
+- [react-calendar](https://github.com/wojtekmaj/react-calendar) - The calendar used in this project is taken from react-calendar.
+
+- [react-hook-form](https://react-hook-form.com/) - The form validation used in this project is taken from react-hook-form.
+
+- [Bootstrap v5.3](https://getbootstrap.com/docs/5.3/) - The Bootstrap framework used in this project is taken from Bootstrap.
+
 ## Acknowledgements
 
 - [Icons8](https://icons8.com/) - The hospital icon used as the logo is taken from Icons8.
