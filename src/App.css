@@ -5,7 +5,8 @@
     --aqua-600: #14c8a7;
     --aqua-700: #12ba9b;
 
-    --black-200: #8391ad;
+    --black-200: #A7AFC4;
+    --black-300: #8391ad;
     --black-400: #394155;
     --black-500: #373737;
 
@@ -14,9 +15,16 @@
     --cyan-700: #10b7d1;
 
     --red-200   : #FBD3DC;
+    --red-300   : #F37A96;
     --red-500   : #e01343;
+    --grey-200  : #E7EAEF;
+    --grey-300  : #D7DBE4;
     --white-500 : #ffffff;
     --yellow-500: #f0b037;
+
+    /* Other CSS Variables */
+    --border-radius: 0.5em;
+    --box-shadow   : 0 7px 30px -10px rgba(150, 170, 180, 0.5);
 
     /* Base font size */
     font-size: 16px;
@@ -85,7 +93,7 @@ p {
 }
 
 .text-secondary {
-    color: var(--black-200) !important;
+    color: var(--black-300) !important;
 }
 
 .small-text {
@@ -105,6 +113,7 @@ p {
 button,
 .btn {
     font-weight: 600;
+    transition : all 0.3s ease-in-out !important;
 }
 
 /* Button DEFAULT State */
@@ -114,7 +123,6 @@ button,
     color           : var(--white-500);
     outline         : 0;
     text-transform  : uppercase;
-    transition      : all 0.3s ease-in-out;
 }
 
 /* Button HOVER State */
@@ -178,7 +186,7 @@ header::after {
 
 /* >>> InfoCard Component <<< */
 .info-card {
-    border-radius: 0.5em;
+    border-radius: var(--border-radius);
     height       : 8em;
 }
 
@@ -196,9 +204,9 @@ header::after {
 
 /* >>> ServiceCard Component <<< */
 .service-card {
-    border-radius: 0.5em;
+    border-radius: var(--border-radius);
     /* UI Soft */
-    box-shadow   : 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+    box-shadow   : var(--box-shadow);
 }
 
 .service-image {
@@ -234,9 +242,9 @@ header::after {
 
 /* >>> TestimonialCard Component <<< */
 .testimonial-card {
-    border-radius: 0.5em;
+    border-radius: var(--border-radius);
     /* UI Soft */
-    box-shadow   : 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+    box-shadow   : var(--box-shadow);
     min-height   : 21.5em;
 }
 
@@ -257,7 +265,7 @@ header::after {
     background-size : cover;
 }
 
-.contact-us-section input,
+input,
 .contact-us-section textarea {
     background-color: var(--white-500);
     border          : 0;
@@ -294,4 +302,153 @@ header::after {
     background-image : url("./assets/images/footer.png");
     background-repeat: no-repeat;
     background-size  : cover;
+}
+
+/* >>> AppointmentHeader Component <<< */
+/* React Calendar */
+.react-calendar {
+    background-color: var(--white-500);
+    border          : 0;
+    border-radius   : 1em;
+    /* UI Soft */
+    box-shadow      : var(--box-shadow);
+    overflow        : hidden;
+    width           : 20em;
+}
+
+.react-calendar button {
+    background-color: transparent;
+    border          : 0;
+    color           : var(--black-400);
+    outline         : 0;
+    padding         : .7em .5em;
+}
+
+.react-calendar__tile:hover {
+    background-color: var(--aqua-500);
+    color           : var(--white-500) !important;
+    transition      : all 0.2s ease-in-out;
+}
+
+.react-calendar__navigation {
+    height  : 4em;
+    position: relative;
+    width   : 100%;
+}
+
+.react-calendar__navigation__label {
+    font-size  : 1.25em;
+    font-weight: 800;
+    left       : .75em;
+    padding    : 0 !important;
+    position   : absolute;
+    top        : 50%;
+    transform  : translateY(-50%);
+    width      : max-content;
+}
+
+.react-calendar__navigation__next2-button,
+.react-calendar__navigation__prev2-button {
+    display: none;
+}
+
+.react-calendar__navigation__prev-button,
+.react-calendar__navigation__next-button {
+    background-color: transparent !important;
+    border          : 0;
+    font-size       : 2em;
+    line-height     : 0;
+    margin          : 0;
+    padding         : 0;
+    position        : absolute;
+    right           : .75em;
+    top             : 45%;
+    transform       : translateY(-45%);
+}
+
+.react-calendar__navigation .react-calendar__navigation__arrow {
+    padding: 0;
+}
+
+.react-calendar__navigation__prev-button {
+    right: 1.5em;
+}
+
+.react-calendar__month-view__weekdays {
+    padding: .5em 0;
+
+}
+
+.react-calendar__month-view__weekdays__weekday {
+    font-weight: 800;
+    text-align : center;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+    text-decoration: none !important;
+}
+
+.react-calendar__month-view__days__day--weekend,
+.react-calendar__month-view__weekdays__weekday--weekend {
+    color: var(--red-500) !important;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+    color: var(--black-200) !important;
+}
+
+.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.react-calendar__month-view__days__day--neighboringMonth {
+    color: var(--red-300) !important;
+}
+
+.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.react-calendar__month-view__days__day--neighboringMonth:hover {
+    color: white !important;
+}
+
+.react-calendar__tile--active {
+    background-color: var(--cyan-600) !important;
+    color           : var(--white-500) !important;
+}
+
+/* >>> BookAppointmentCard Component <<< */
+.book-appointment-card {
+    box-shadow: var(--box-shadow);
+}
+
+.ReactModal__Body--open input {
+    border : 2px solid var(--grey-300);
+    padding: .5em .75em;
+}
+
+.ReactModal__Body--open input:disabled {
+    background-color: var(--grey-300);
+}
+
+.ReactModal__Body--open .close-btn {
+    background-color: var(--black-500);
+    border-radius   : 50%;
+    color           : var(--black-300);
+    height          : 2em;
+    margin          : 0;
+    padding         : 0;
+    width           : 2em;
+}
+
+.ReactModal__Body--open .close-btn:hover {
+    color: var(--black-200);
+}
+
+.ReactModal__Body--open h4 {
+    color: var(--black-500);
+}
+
+.ReactModal__Body--open .submit-btn {
+    background-color: var(--black-500);
+    color           : var(--white-500);
+    width           : 100%;
+}
+
+.ReactModal__Body--open .submit-btn:hover {
+    background-color: var(--black-400);
+    color           : var(--grey-200);
 }
