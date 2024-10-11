@@ -150,6 +150,8 @@ doctors-portal/
 │   │   |   └── MakeAppointment.jsx
 │   │   ├── NavBar/
 │   │   |   └── NavBar.jsx
+│   │   ├── PrivateRoute/
+│   │   |   └── PrivateRoute.jsx
 │   │   ├── ServiceCard/
 │   │   |   └── ServiceCard.jsx
 │   │   ├── Services/
