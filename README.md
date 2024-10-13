@@ -169,6 +169,8 @@ doctors-portal/
 │   │   |   └── Home.jsx
 │   │   ├── Login/
 │   │   |   └── Login.jsx
+│   │   ├── SignUp/
+│   │   |   └── SignUp.jsx
 │   ├── App.css
 │   ├── App.jsx
 │   └── main.jsx
