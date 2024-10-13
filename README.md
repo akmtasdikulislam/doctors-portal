@@ -254,6 +254,10 @@ This project was developed by Akm Tasdikul Islam.
 
 ## Dependencies
 
+- @fortawesome/fontawesome-svg-core: ^6.6.0,
+- @fortawesome/free-regular-svg-icons: ^6.6.0,
+- @fortawesome/free-solid-svg-icon: ^6.6.0,
+- @fortawesome/react-fontawesome: ^0.2.2,
 - firebase: ^10.14.1
 - react: ^18.3.1
 - react-calendar: ^5.0.0
