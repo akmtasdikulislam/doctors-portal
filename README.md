@@ -231,6 +231,14 @@ MIT
 
 - [How can I undo a `git commit` locally and on a remote after `git push`](https://stackoverflow.com/questions/6459080/how-can-i-undo-a-git-commit-locally-and-on-a-remote-after-git-push) - This StackOverflow question helped me to understand how to undo a `git commit` locally and on a remote after `git push`.
 
+- [Authenticate Using Google with JavaScript](https://firebase.google.com/docs/auth/web/google-signin?authuser=0) - This article helped me to understand how to authenticate using Google with JavaScript.
+
+- [Authenticate with Firebase using Password-Based Accounts using Javascript ](https://firebase.google.com/docs/auth/web/password-auth?authuser=0) - This article helped me to understand how to authenticate with Firebase using Password-Based Accounts using Javascript.
+
+- [Set Up with React | Font Awesome Docs](https://docs.fontawesome.com/web/use-with/react) - This article helped me to understand how to set up Font Awesome with React.
+
+- [Using a Package Manager | Font Awesome Docs](https://docs.fontawesome.com/web/setup/packages) - This article helped me to understand how to use a package manager (npm or Yarn) to install Font Awesome package.
+
 ## Acknowledgements
 
 - [Icons8](https://icons8.com/) - The hospital icon used as the logo is taken from Icons8.
