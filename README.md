@@ -224,6 +224,13 @@ MIT
 
 - [Bootstrap v5.3](https://getbootstrap.com/docs/5.3/) - The Bootstrap framework used in this project is taken from Bootstrap.
 
+- [Environment Variables in Vite + React](https://www.youtube.com/watch?v=yGNGtd-d3ro) - This video helped me to understand how to use environment variables in Vite + React.
+
+- [Env Variables and Modes](https://vite.dev/guide/env-and-mode.html) - This article helped me to understand how to use environment variables in Vite + React.
+- [How to Undo Pushed Commits with Git](https://dev.to/github/how-to-undo-pushed-commits-with-git-2pe6) - This article helped me to understand how to undo pushed commits with Git.
+
+- [How can I undo a `git commit` locally and on a remote after `git push`](https://stackoverflow.com/questions/6459080/how-can-i-undo-a-git-commit-locally-and-on-a-remote-after-git-push) - This StackOverflow question helped me to understand how to undo a `git commit` locally and on a remote after `git push`.
+
 ## Acknowledgements
 
 - [Icons8](https://icons8.com/) - The hospital icon used as the logo is taken from Icons8.
