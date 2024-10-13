@@ -239,6 +239,7 @@ This project was developed by Akm Tasdikul Islam.
 
 ## Dependencies
 
+- firebase: ^10.14.1
 - react: ^18.3.1
 - react-calendar: ^5.0.0
 - react-dom: ^18.3.1
