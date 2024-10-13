@@ -1,14 +1,40 @@
-/** React related imports */
-import { Route, Routes } from "react-router-dom"; // Used for defining routes and navigation in the app
+// ** React and React Router related imports **
+import { useEffect } from "react"; // Hook for performing side effects in functional components
+import { Route, Routes } from "react-router-dom"; // Components for defining routes in the application
 
-/** Styles */
-import "./App.css"; // Imports global styles for the app
+// ** Firebase related imports **
+import { initializeApp } from "firebase/app"; // Function to initialize Firebase app
+import { getAuth, onAuthStateChanged } from "firebase/auth"; // Functions for Firebase authentication
 
-/** Page components */
-import Appointment from "./pages/Appointment/Appointment"; // Imports the Appointment component from the specified path to be used in the app's routing or rendering
-import Home from "./pages/Home/Home"; // Imports the Home component to be rendered for the root route
+// ** Stylesheet import **
+import "./App.css"; // CSS styles for the App component
 
+// ** Page component imports **
+import Appointment from "./pages/Appointment/Appointment"; // Appointment page component
+import Home from "./pages/Home/Home"; // Home page component
 function App() {
+  // Firebase configuration object
+  const firebaseConfig = {
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY, // Firebase API key for authentication and authorization
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN, // Firebase Auth domain for handling authentication
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID, // Unique identifier for the Firebase project
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET, // Firebase Storage bucket for file storage
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID, // Sender ID for Firebase Cloud Messaging
+    appId: import.meta.env.VITE_FIREBASE_APP_ID, // Unique identifier for the Firebase app
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig); // Initialize Firebase app with the provided configuration
+  const auth = getAuth(app); // Get the Auth instance for the initialized Firebase app
+
+  useEffect(() => {
+    // Set up an authentication state listener when the component mounts
+    onAuthStateChanged(auth, (user) => {
+      // Log the user object to the console whenever the auth state changes
+      console.log({ user });
+      // Note: This is useful for debugging and monitoring auth state changes
+    });
+  }, [auth]); // Re-run this effect if the 'auth' object changes
   return (
     <>
       <Routes>
