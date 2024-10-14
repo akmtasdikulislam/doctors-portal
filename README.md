@@ -171,7 +171,13 @@ doctors-portal/
 │   │   ├── Testimonials/
 │   │   |   └── Testimonials.jsx
 │   ├── functions/
+│   │   ├── Authentication/
+|   │   │   ├── handleContinueWithGoogle.js
+|   │   │   ├── handleLogin.js
+|   │   │   ├── handleSignOut.js
+│   │   |   └── handleSignUp.js
 │   │   ├── formatDate.js
+│   │   ├── formatErrorMessage.js
 │   ├── pages/
 │   │   ├── Appointment/
 │   │   |   └── Appointment.jsx
@@ -246,6 +252,8 @@ MIT
 - [Authenticate Using Google with JavaScript](https://firebase.google.com/docs/auth/web/google-signin?authuser=0) - This article helped me to understand how to authenticate using Google with JavaScript.
 
 - [Authenticate with Firebase using Password-Based Accounts using Javascript ](https://firebase.google.com/docs/auth/web/password-auth?authuser=0) - This article helped me to understand how to authenticate with Firebase using Password-Based Accounts using Javascript.
+
+- [Manage Users in Firebase](https://firebase.google.com/docs/auth/web/manage-users) - This article helped me to understand how to manage users (create and update user profile) in Firebase.
 
 - [Set Up with React | Font Awesome Docs](https://docs.fontawesome.com/web/use-with/react) - This article helped me to understand how to set up Font Awesome with React.
 
