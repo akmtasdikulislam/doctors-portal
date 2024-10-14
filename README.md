@@ -158,8 +158,8 @@ doctors-portal/
 │   │   |   └── ServiceCard.jsx
 │   │   ├── Services/
 │   │   |   └── Services.jsx
-│   │   ├── StateCard/
-│   │   |   └── StateCard.jsx
+│   │   ├── SignUpForm/
+│   │   |   └── SignUpForm.jsx
 │   │   ├── TestimonialCard/
 │   │   |   └── TestimonialCard.jsx
 │   │   ├── Testimonials/
