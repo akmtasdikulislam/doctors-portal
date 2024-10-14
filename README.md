@@ -142,8 +142,6 @@ doctors-portal/
 │   │   |   └── Footer.jsx
 │   │   ├── FormError/
 │   │   |   └── FormError.jsx
-│   │   ├── FormOverlay/
-│   │   |   └── FormOverlay.jsx
 │   │   ├── FormStateCard/
 │   │   |   └── FormStateCard.jsx
 │   │   ├── Header/
@@ -152,6 +150,8 @@ doctors-portal/
 │   │   |   └── InfoCard.jsx
 │   │   ├── LoginForm/
 │   │   |   └── LoginForm.jsx
+│   │   ├── LoginFormOverlay/
+│   │   |   └── LoginFormOverlay.jsx
 │   │   ├── MakeAppointment/
 │   │   |   └── MakeAppointment.jsx
 │   │   ├── NavBar/
@@ -164,6 +164,8 @@ doctors-portal/
 │   │   |   └── Services.jsx
 │   │   ├── SignUpForm/
 │   │   |   └── SignUpForm.jsx
+│   │   ├── SignUpFormOverlay/
+│   │   |   └── SignUpFormOverlay.jsx
 │   │   ├── TestimonialCard/
 │   │   |   └── TestimonialCard.jsx
 │   │   ├── Testimonials/
