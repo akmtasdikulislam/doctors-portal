@@ -10,8 +10,11 @@ import { getAuth, onAuthStateChanged } from "firebase/auth"; // Functions for Fi
 import "./App.css"; // CSS styles for the App component
 
 // ** Page component imports **
-import Appointment from "./pages/Appointment/Appointment"; // Appointment page component
-import Home from "./pages/Home/Home"; // Home page component
+import Appointment from "./pages/Appointment/Appointment"; // Appointment component for the appointment booking page
+import Home from "./pages/Home/Home"; // Home component for the main landing page
+import Login from "./pages/Login/Login"; // Login component for user authentication
+import NotFound from "./pages/NotFound/NotFound"; // NotFound component for handling 404 errors
+import SignUp from "./pages/SignUp/SignUp"; // SignUp component for user registration
 
 // ** Context Creation **
 export const AppContext = createContext();
@@ -37,6 +40,7 @@ function App() {
   useEffect(() => {
     // Set up an authentication state listener when the component mounts
     onAuthStateChanged(auth, (user) => {
+      setUser(user); // Update the user state with the current user object
       // Log the user object to the console whenever the auth state changes
       console.log({ user });
       // Note: This is useful for debugging and monitoring auth state changes
@@ -50,6 +54,12 @@ function App() {
         {/* Render the Home component when the path is "/" */}
         <Route path="/appointment" element={<Appointment />} />
         {/* Render the Appointment component when the path is "/appointment" */}
+        <Route path="/login" element={<Login />} />
+        {/* Render the Login component when the path is "/login" */}
+        <Route path="/sign-up" element={<SignUp />} />
+        {/* Render the SignUp component when the path is "/sign-up" */}
+        <Route path="/*" element={<NotFound />} />
+        {/* Render the NotFound component when the path is not recognized */}
       </Routes>
       {/* Routes component wraps all Route components for defining app navigation */}
     </AppContext.Provider>
