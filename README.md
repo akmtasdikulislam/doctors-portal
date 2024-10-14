@@ -142,6 +142,8 @@ doctors-portal/
 │   │   |   └── Footer.jsx
 │   │   ├── FormError/
 │   │   |   └── FormError.jsx
+│   │   ├── FormOverlay/
+│   │   |   └── FormOverlay.jsx
 │   │   ├── Header/
 │   │   |   └── Header.jsx
 │   │   ├── InfoCard/
