@@ -181,6 +181,8 @@ doctors-portal/
 │   ├── pages/
 │   │   ├── Appointment/
 │   │   |   └── Appointment.jsx
+│   │   ├── Dashboard/
+│   │   |   └── Dashboard.jsx
 │   │   ├── Home/
 │   │   |   └── Home.jsx
 │   │   ├── Login/
