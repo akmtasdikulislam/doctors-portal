@@ -162,6 +162,8 @@ doctors-portal/
 │   │   |   └── ServiceCard.jsx
 │   │   ├── Services/
 │   │   |   └── Services.jsx
+│   │   ├── SideBar/
+│   │   |   └── SideBar.jsx
 │   │   ├── SignUpForm/
 │   │   |   └── SignUpForm.jsx
 │   │   ├── SignUpFormOverlay/
