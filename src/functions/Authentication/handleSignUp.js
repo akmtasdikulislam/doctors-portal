@@ -3,12 +3,13 @@
  *
  * This function performs the following operations:
  * 1. Creates a new user account with the provided email and password
- * 2. Updates the user's profile with the provided name and a default photo URL
- * 3. Sets the sign-up status to success if account creation is successful
- * 4. Sets the sign-up status to failure with a formatted error message if an error occurs
+ * 2. Signs out the user immediately after account creation
+ * 3. Updates the user's profile with the provided name and a default photo URL
+ * 4. Sets the sign-up status to success if account creation is successful
+ * 5. Sets the sign-up status to failure with a formatted error message if an error occurs
  *
- * The function uses Firebase's createUserWithEmailAndPassword and updateProfile methods
- * for user creation and profile updating, respectively. It also uses a custom
+ * The function uses Firebase's createUserWithEmailAndPassword, signOut, and updateProfile methods
+ * for user creation, sign-out, and profile updating, respectively. It also uses a custom
  * formatErrorMessage utility for error handling.
  *
  * @param {object} auth - The Firebase auth instance
@@ -21,9 +22,9 @@
 // ** Firebase Authentication imports **
 import {
   createUserWithEmailAndPassword, // Used to create a new user account with email and password
+  signOut, // Used to sign out the user after successful account creation
   updateProfile, // Used to update the user's profile with display name and photo URL
 } from "firebase/auth";
-
 // ** Utility function imports **
 import { formatErrorMessage } from "../formatErrorMessage"; // Used to format error messages for display
 
@@ -31,6 +32,7 @@ export const handleSignUp = (auth, email, name, password, setSignUpStatus) => {
   // Create a new user account with the provided email and password
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
+      signOut(auth); // Sign out the user after successful sign-up
       // Get the user object from the userCredential
       const user = userCredential.user;
       // Update the user's profile with display name and default photo URL
