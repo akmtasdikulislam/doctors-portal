@@ -141,6 +141,8 @@ doctors-portal/
 |   │   │   |   └── Appointments.jsx
 │   │   |   ├── DashboardHeader
 |   │   │   |   └── DashboardHeader.jsx
+│   │   |   ├── NotificationPanel
+|   │   │   |   └── NotificationPanel.jsx
 │   │   |   ├── Patients
 |   │   │   |   └── Patients.jsx
 │   │   |   ├── Profile
