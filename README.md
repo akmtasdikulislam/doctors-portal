@@ -147,6 +147,8 @@ doctors-portal/
 |   │   │   |   └── Patients.jsx
 │   │   |   ├── Profile
 |   │   │   |   └── Profile.jsx
+│   │   |   ├── ProfilePanel
+|   │   │   |   └── ProfilePanel.jsx
 │   │   ├── DentalCareService/
 │   │   |   └── DentalCareService.jsx
 │   │   ├── Footer/
