@@ -139,12 +139,12 @@ doctors-portal/
 │   │   ├── Dashboard/
 │   │   |   ├── Appointments
 |   │   │   |   └── Appointments.jsx
-│   │   |   ├── DashboardCard
-|   │   │   |   └── DashboardCard.jsx
 │   │   |   ├── DashboardHeader
 |   │   │   |   └── DashboardHeader.jsx
 │   │   |   ├── DashboardHome
 |   │   │   |   └── DashboardHome.jsx
+│   │   |   ├── DashboardMetrics
+|   │   │   |   └── DashboardMetrics.jsx
 │   │   |   ├── NotificationPanel
 |   │   │   |   └── NotificationPanel.jsx
 │   │   |   ├── Patients
