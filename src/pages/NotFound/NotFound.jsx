@@ -13,7 +13,7 @@
  *    - Displays a 404 error message
  *    - Provides a link to return to the home page
  *
- * The component utilizes React Router for navigation and FontAwesome for icons.
+ * The component utilizes React Router for navigation and LucideIcons for icons.
  * It also implements responsive design using flexbox for centering content.
  */
 
@@ -24,8 +24,7 @@ import PropTypes from "prop-types"; // For pageType-checking component props
 import { Link } from "react-router-dom"; // For creating navigation links
 
 /** Icon related imports */
-import { faFaceSadTear } from "@fortawesome/free-solid-svg-icons"; // Sad face icon for 404 error page
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // FontAwesome component for rendering icons
+import { Frown } from "lucide-react"; // For displaying sad face icon in 404 error page
 
 const NotFound = ({ pageType }) => {
   return (
@@ -49,7 +48,7 @@ const NotFound = ({ pageType }) => {
         // Render content for 404 error
         <>
           {/* Display sad face icon for 404 error */}
-          <FontAwesomeIcon className="icon" icon={faFaceSadTear} />
+          <Frown className="icon" />
           {/* Display heading for 404 error page */}
           <h1 className="text-center">
             404 Error! <br /> Requested page not found.

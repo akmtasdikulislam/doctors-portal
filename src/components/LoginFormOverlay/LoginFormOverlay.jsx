@@ -9,7 +9,7 @@
  * - authStatus: Object containing the authentication status and message
  * - setIsProcessing: Function to update the processing state
  *
- * The component uses React Router for navigation and FontAwesome for icons.
+ * The component uses React Router for navigation and LucideIcons for icons.
  * It conditionally renders a FormStateCard component to show:
  * - Processing state: When logging in
  * - Success state: When login is successful
@@ -24,13 +24,8 @@ import PropTypes from "prop-types"; // For type-checking component props
 // ** React Router related imports **
 import { Link, useLocation } from "react-router-dom"; // For navigation and accessing current location
 
-// ** Font Awesome related imports **
-import {
-  faCheckCircle, // Used for success icon in FormStateCard
-  faExclamationCircle, // Used for error icon in FormStateCard
-  faRotate, // Used for processing icon in FormStateCard
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // For rendering Font Awesome icons
+// ** Icons imports **
+import { CircleAlert, CircleCheck, RefreshCcw } from "lucide-react"; // Icons for error, success, and processing states in form overlay
 
 // ** Component imports **
 import FormStateCard from "../FormStateCard/FormStateCard"; // Renders different states of the form (processing, success, error)
@@ -46,7 +41,7 @@ const LoginFormOverlay = ({ isProcessing, authStatus, setIsProcessing }) => {
         // Show processing state when isProcessing is true and authStatus is null
         <FormStateCard type="processing">
           {/* Display rotating icon to indicate processing */}
-          <FontAwesomeIcon icon={faRotate} />
+          <RefreshCcw />
           {/* Show processing message */}
           <h6 className="mb-4">
             <span>Processing!</span> Logging in...
@@ -56,7 +51,7 @@ const LoginFormOverlay = ({ isProcessing, authStatus, setIsProcessing }) => {
         // Show success state when authStatus.success is true
         <FormStateCard type="success">
           {/* Display check circle icon to indicate success */}
-          <FontAwesomeIcon icon={faCheckCircle} />
+          <CircleCheck />
           {/* Show success message */}
           <h6 className="mb-0">
             <span>{authStatus?.message}</span>
@@ -74,7 +69,7 @@ const LoginFormOverlay = ({ isProcessing, authStatus, setIsProcessing }) => {
         // Show error state when authStatus.success is false
         <FormStateCard type="error">
           {/* Display exclamation circle icon to indicate error */}
-          <FontAwesomeIcon icon={faExclamationCircle} />
+          <CircleAlert />
           {/* Show error message */}
           <h6>
             <span>Error!</span> {authStatus?.message}
