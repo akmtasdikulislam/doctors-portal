@@ -5,20 +5,31 @@
     --aqua-600: #14c8a7;
     --aqua-700: #12ba9b;
 
-    --black-200: #A7AFC4;
-    --black-300: #8391ad;
-    --black-400: #394155;
+    --black-300: #5C5C5C;
+    --black-400: #4A4A4A;
     --black-500: #373737;
+
+    --blue-500: #007bff;
 
     --cyan-500: #11ceea;
     --cyan-600: #11c3df;
     --cyan-700: #10b7d1;
 
+    --deep-blue-200: #A7AFC4;
+    --deep-blue-300: #8391ad;
+    --deep-blue-400: #394155;
+
     --green-200: #AFF9C3;
     --green-500: #1d9f26;
 
+    --grey-100: #F0F4F8;
     --grey-200: #E7EAEF;
     --grey-300: #D7DBE4;
+    --grey-400: #E6E6E6;
+
+    --purple-200: #e7d7f9;
+    --purple-500: #9352b0;
+    --purple-600: #83489e;
 
     --red-200: #FBD3DC;
     --red-300: #F37A96;
@@ -27,11 +38,14 @@
 
     --white-500: #ffffff;
 
-    --yellow-200   : #FBE9C9;
-    --yellow-500   : #f0b037;
+    --yellow-200: #FBE9C9;
+    --yellow-500: #f0b037;
+    --yellow-600: #FFA500;
+
     /* Other CSS Variables */
     --border-radius: 0.5em;
     --box-shadow   : 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+    --navbar-height: 4.5em;
 
     /* Base font size */
     font-size: 16px;
@@ -44,7 +58,7 @@
 }
 
 body {
-    color      : var(--black-400);
+    color      : var(--deep-blue-400);
     font-family: "Sarabun", system-ui;
     font-weight: 500;
     min-height : 100vh;
@@ -54,7 +68,7 @@ body {
 
 /* ** Links ** */
 a {
-    color          : var(--black-400);
+    color          : var(--deep-blue-400);
     text-decoration: none;
 }
 
@@ -109,7 +123,7 @@ p {
 }
 
 .text-secondary {
-    color: var(--black-300) !important;
+    color: var(--deep-blue-300) !important;
 }
 
 .small-text {
@@ -180,6 +194,15 @@ button,
     color           : var(--white-500);
 }
 
+/* ** Input Fields ** */
+input {
+    border       : 2px solid var(--grey-300);
+    border-radius: .25em;
+    color        : var(--deep-blue-400);
+    outline      : 0;
+    padding      : 0.5em;
+}
+
 /* ===== Home Page ===== */
 /* >>> Header Component <<< */
 header {
@@ -205,7 +228,7 @@ header::after {
 
 /* >>> NavBar Component <<< */
 .navbar .active {
-    background-color: var(--black-400);
+    background-color: var(--deep-blue-400);
     color           : var(--white-500) !important;
     border-radius   : .25em;
 }
@@ -238,7 +261,7 @@ header::after {
 }
 
 .info-dark {
-    background-color: var(--black-400);
+    background-color: var(--deep-blue-400);
 }
 
 .info-icon {
@@ -308,12 +331,12 @@ header::after {
     background-size : cover;
 }
 
-input,
+.contact-us-section input,
 .contact-us-section textarea {
     background-color: var(--white-500);
     border          : 0;
     border-radius   : .25em;
-    color           : var(--black-400);
+    color           : var(--deep-blue-400);
     outline         : 0;
     padding         : 0.75em;
 }
@@ -362,7 +385,7 @@ input,
 .react-calendar button {
     background-color: transparent;
     border          : 0;
-    color           : var(--black-400);
+    color           : var(--deep-blue-400);
     outline         : 0;
     padding         : .7em .5em;
 }
@@ -437,7 +460,7 @@ input,
 }
 
 .react-calendar__month-view__days__day--neighboringMonth {
-    color: var(--black-200) !important;
+    color: var(--deep-blue-200) !important;
 }
 
 .react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend.react-calendar__month-view__days__day--neighboringMonth {
@@ -470,7 +493,7 @@ input,
 .ReactModal__Body--open .close-btn {
     background-color: var(--black-500);
     border-radius   : 50%;
-    color           : var(--black-300);
+    color           : var(--deep-blue-300);
     height          : 2em;
     margin          : 0;
     padding         : 0;
@@ -478,7 +501,7 @@ input,
 }
 
 .ReactModal__Body--open .close-btn:hover {
-    color: var(--black-200);
+    color: var(--deep-blue-200);
 }
 
 .ReactModal__Body--open h4 {
@@ -492,13 +515,13 @@ input,
 }
 
 .ReactModal__Body--open .submit-btn:hover {
-    background-color: var(--black-400);
+    background-color: var(--deep-blue-400);
     color           : var(--grey-200);
 }
 
 /* ===== Login & Sign Up Page ===== */
 .authentication-form-container-wrapper {
-    height: calc(100vh - 4.5em);
+    height: calc(100vh - var(--navbar-height));
 }
 
 .authentication-form-container {
@@ -515,12 +538,7 @@ input,
 
 .authentication-form-container input {
     background-color: var(--white-500);
-    border          : 2px solid var(--grey-300);
-    border-radius   : .25em;
-    color           : var(--black-400);
     margin-top      : .25em;
-    outline         : 0;
-    padding         : 0.5em;
 }
 
 input:focus {
@@ -532,7 +550,7 @@ input:focus {
 }
 
 .authentication-form-container .alternative {
-    color   : var(--black-300);
+    color   : var(--deep-blue-300);
     position: relative;
 }
 
@@ -572,7 +590,7 @@ input:focus {
 
 /* >>> FormState Component <<< */
 .state {
-    color    : var(--black-400);
+    color    : var(--deep-blue-400);
     position : absolute;
     top      : 50%;
     left     : 50%;
@@ -631,11 +649,294 @@ input:focus {
 /* ===== NotFound Page ===== */
 .not-found-page {
     height: 100vh;
-    color : var(--black-200);
+    color : var(--deep-blue-200);
 }
 
 .not-found-page .icon {
     font-size: 4em;
+}
+
+/* ===== Dashboard Page ===== */
+#dashboard {
+    max-width       : 100vw;
+    display         : flex;
+    background-color: var(--grey-100);
+
+}
+
+.dashboard-container {
+    width: 100%;
+}
+
+/* >>> SideBar Component <<< */
+#sidebar {
+    background-color: var(--black-500);
+    color           : var(--white-500);
+    height          : 100vh;
+    transition      : all 0.3s ease-in-out;
+    width           : 21em;
+    overflow        : hidden;
+}
+
+.sidebar-header {
+    align-items: center;
+    display    : flex;
+    gap        : 1.25em;
+    margin-left: 0.25em;
+    overflow   : hidden;
+    width      : 100%;
+}
+
+.sidebar-header img {
+    width: 2.5em;
+}
+
+.sidebar-header .title {
+    font-size  : 1.75em;
+    font-weight: 700;
+    min-width  : max-content;
+}
+
+.sidebar-links-wrapper {
+    height: calc(100% - 4.55em);
+}
+
+.sidebar-link {
+    align-items    : center;
+    border-radius  : .5em;
+    color          : var(--white-500);
+    display        : flex;
+    gap            : 1em;
+    height         : 3em;
+    justify-content: start;
+    margin-bottom  : .5em;
+    padding        : .25em .85em;
+    transition     : all 0.3s ease-in-out;
+    white-space    : nowrap;
+    width          : 100%;
+}
+
+.sidebar-link:hover {
+    background-color: var(--black-300);
+    color           : var(--white-500);
+}
+
+.sidebar-links .active {
+    background-color: var(--black-400);
+}
+
+.sidebar-link-icon {
+    height   : 1.25em;
+    min-width: 1.25em;
+    width    : 1.25em;
+}
+
+/* Sidebar Collapsed */
+
+#sidebar.collapsed {
+    width: 5em;
+}
+
+.collapsed .sidebar-link {
+    overflow: hidden;
+    width   : 3em;
+}
+
+.sidebar-header .title,
+.sidebar-link-text {
+    opacity   : 1;
+    transition: all 0.4s ease-in-out;
+}
+
+.collapsed .sidebar-header .title,
+.collapsed .sidebar-link-text {
+    opacity   : 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar-collapse-trigger .sidebar-link-icon {
+    transition: all 0.4s ease-in-out;
+}
+
+.collapsed .sidebar-collapse-trigger .sidebar-link-icon {
+    transform: rotateY(180deg);
+
+}
+
+/* >>> DashboardHeader Component <<< */
+#dashboardHeader {
+    background-color: var(--white-500);
+    border-bottom   : 1px solid var(--grey-300);
+    height          : var(--navbar-height);
+    width           : 100%;
+}
+
+.notificationPanelRef {
+    position: relative;
+}
+
+.notification-trigger {
+    width : 3em;
+    height: 3em;
+}
+
+.notification-trigger:hover {
+    background-color: var(--grey-200);
+}
+
+.profile-trigger {
+    border-radius: .5em;
+    cursor       : pointer;
+    padding      : .5em .75em;
+    transition   : all 0.3s ease-in-out;
+}
+
+.profile-trigger:hover {
+    background-color: var(--grey-200);
+}
+
+.profile-trigger .profile-photo-container {
+    width : 2.75em;
+    height: 2.75em;
+}
+
+.profile-trigger .profile-photo-container img {
+    border-radius: 50%;
+    width        : 100%;
+    height       : 100%;
+    object-fit   : cover;
+}
+
+.profile-trigger .user-detail .name {
+    font-weight: 700;
+    line-height: 1em;
+}
+
+
+/* >>> NotificationPanel Component <<< */
+.notification-panel {
+    background   : white;
+    border       : 1px solid #eee;
+    border-radius: .5em;
+    overflow     : hidden;
+    right        : 0;
+    top          : 100%;
+    width        : 25em;
+    z-index      : 1000;
+}
+
+.notification-item {
+    cursor       : pointer;
+    margin-bottom: .5em;
+    padding      : .75em .75em;
+    transition   : background-color 0.2s ease-in-out;
+}
+
+.notification-item:last-of-type {
+    margin: 0;
+}
+
+.notification-item:hover {
+    background-color: var(--grey-100);
+}
+
+.notification-item.unread {
+    background-color: var(--grey-100);
+}
+
+.notification-item.unread:hover {
+    background-color: var(--grey-200);
+}
+
+.notification-item.unread .notification-title {
+    font-weight: 700;
+}
+
+.notification-title {
+    font-weight: 500;
+    font-size  : 1em;
+}
+
+.notification-icon {
+    width : 1.25em;
+    height: 1.25em;
+}
+
+.notification-icon.appointment-icon {
+    color: var(--yellow-600);
+}
+
+.notification-icon.message-icon {
+    color: var(--green-500);
+}
+
+.notification-icon.payment-icon {
+    color: var(--blue-500);
+}
+
+.notification-icon.reminder-icon {
+    color: var(--red-500);
+}
+
+.notification-icon.system-icon {
+    color: var(--purple-500);
+}
+
+/* >>> ProfilePanel Component <<< */
+.profile-panel {
+    background-color: var(--white-500);
+    border          : 1px solid var(--grey-200);
+    border-radius   : .5em;
+    overflow        : hidden;
+    width           : 13.5em;
+}
+
+.profile-panel-header .name {
+    color      : var(--black-400);
+    font-size  : 1.05em;
+    font-weight: 600;
+}
+
+.profile-menu-item {
+    color     : var(--black-400);
+    cursor    : pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.profile-menu-item:hover {
+    background-color: var(--grey-100);
+    color           : var(--black-400);
+}
+
+.profile-menu-item p {
+    font-size: 1em;
+}
+
+.user-menu-icon {
+    height: 1.3em;
+    width : 1.3em;
+}
+
+.logout-btn {
+    padding      : 0;
+    width        : 100%;
+    border-radius: 0;
+}
+
+.logout-btn:hover {
+    color: var(--red-500);
+}
+
+.admin-badge {
+    background-color: var(--red-500);
+}
+
+.doctor-badge {
+    background-color: var(--blue-500);
+}
+
+.patient-badge {
+    background-color: var(--green-500);
 }
 
 /* Animations */
@@ -669,8 +970,105 @@ input:focus {
 }
 
 .loading-dots::after {
-    content  : '.';
-    color    : var(--black-400);
-    display  : inline-block;
     animation: dotLoading 2.5s infinite steps(1, end);
+    color    : var(--deep-blue-400);
+    content  : '.';
+    display  : inline-block;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.6em;
+    }
+
+    h4 {
+        font-size: 1.4em;
+    }
+
+    h5 {
+        font-size: 1.2em;
+    }
+
+    h6 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .small-text {
+        font-size: 0.75em;
+    }
+
+    .caption-text {
+        font-size: 0.625em;
+    }
+}
+
+@media (max-width: 625px) {
+    .user-detail {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    #sidebar {
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+        height    : 100vh;
+        left      : -100%;
+        position  : fixed;
+        top       : 0;
+        transition: left .4s ease-in-out;
+        width     : 19em;
+        z-index   : 1000;
+    }
+
+    #sidebar.mobile-open {
+        left: 0;
+    }
+
+    .sidebar-header {
+        gap: .5em;
+    }
+
+    .dashboard-container {
+        margin-left: 0;
+        width      : 100%;
+    }
+
+    .notificationPanelRef {
+        position: initial;
+    }
+
+    .notification-panel {
+        left      : 45%;
+        max-width : 25em;
+        overflow-y: auto;
+        top       : 23%;
+        transform : translate(-45.5%, -23%);
+        width     : 90vw;
+        z-index   : 1000;
+    }
+
+    .profile-panel {
+        right: 0;
+    }
+}
+
+@media (max-width: 435px) {
+    .profile-panel {
+        margin-right: .5em;
+    }
 }
