@@ -139,6 +139,8 @@ doctors-portal/
 │   │   ├── Dashboard/
 │   │   |   ├── Appointments
 |   │   │   |   └── Appointments.jsx
+│   │   |   ├── DashboardCard
+|   │   │   |   └── DashboardCard.jsx
 │   │   |   ├── DashboardHeader
 |   │   │   |   └── DashboardHeader.jsx
 │   │   |   ├── NotificationPanel
