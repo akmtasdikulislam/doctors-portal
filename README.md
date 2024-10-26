@@ -153,6 +153,8 @@ doctors-portal/
 |   │   │   |   └── Profile.jsx
 │   │   |   ├── ProfilePanel
 |   │   │   |   └── ProfilePanel.jsx
+│   │   |   ├── RecentActivity
+|   │   │   |   └── RecentActivity.jsx
 │   │   ├── DentalCareService/
 │   │   |   └── DentalCareService.jsx
 │   │   ├── Footer/
