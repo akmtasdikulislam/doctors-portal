@@ -143,6 +143,8 @@ doctors-portal/
 |   │   │   |   └── DashboardCard.jsx
 │   │   |   ├── DashboardHeader
 |   │   │   |   └── DashboardHeader.jsx
+│   │   |   ├── DashboardHome
+|   │   │   |   └── DashboardHome.jsx
 │   │   |   ├── NotificationPanel
 |   │   │   |   └── NotificationPanel.jsx
 │   │   |   ├── Patients
