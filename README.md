@@ -155,6 +155,8 @@ doctors-portal/
 |   │   │   |   └── ProfilePanel.jsx
 │   │   |   ├── RecentActivity
 |   │   │   |   └── RecentActivity.jsx
+│   │   |   ├── Tasks
+|   │   │   |   └── Tasks.jsx
 │   │   ├── DentalCareService/
 │   │   |   └── DentalCareService.jsx
 │   │   ├── Footer/
