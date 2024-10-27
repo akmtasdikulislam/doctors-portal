@@ -159,6 +159,8 @@ doctors-portal/
 |   │   │   |   └── Tasks.jsx
 │   │   ├── DentalCareService/
 │   │   |   └── DentalCareService.jsx
+│   │   ├── EmptyContainer/
+│   │   |   └── EmptyContainer.jsx
 │   │   ├── Footer/
 │   │   |   └── Footer.jsx
 │   │   ├── FormError/
