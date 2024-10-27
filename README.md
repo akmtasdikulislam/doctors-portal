@@ -156,6 +156,8 @@ doctors-portal/
 │   │   |   ├── ProgressiveMetrics
 |   │   │   |   ├── HospitalStats
 |   |   │   │   |   └── HospitalStats.jsx
+│   │   |   ├── QuickActions
+|   │   │   |   └── QuickActions.jsx
 │   │   |   ├── RecentActivity
 |   │   │   |   └── RecentActivity.jsx
 │   │   |   ├── Tasks
