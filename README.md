@@ -154,8 +154,7 @@ doctors-portal/
 │   │   |   ├── ProfilePanel
 |   │   │   |   └── ProfilePanel.jsx
 │   │   |   ├── ProgressiveMetrics
-|   │   │   |   ├── HospitalStats
-|   |   │   │   |   └── HospitalStats.jsx
+|   |   │   │   └── ProgressiveMetrics.jsx
 │   │   |   ├── QuickActions
 |   │   │   |   └── QuickActions.jsx
 │   │   |   ├── RecentActivity
