@@ -137,6 +137,8 @@ doctors-portal/
 │   │   ├── ContactUs/
 │   │   |   └── ContactUs.jsx
 │   │   ├── Dashboard/
+│   │   |   ├── AppointmentModal
+|   │   │   |   └── AppointmentModal.jsx
 │   │   |   ├── Appointments
 |   │   │   |   └── Appointments.jsx
 │   │   |   ├── DashboardHeader
