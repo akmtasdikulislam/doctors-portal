@@ -1,28 +1,42 @@
 /* ===== General Styles ===== */
 :root {
     /* Colors */
+    --aqua-100: #e6f9f6;
+    --aqua-200: #b9f0e6;
     --aqua-500: #15d2ae;
     --aqua-600: #14c8a7;
     --aqua-700: #12ba9b;
+    --aqua-800: #11a888;
+    --aqua-950: #0e8263;
+
 
     --black-300: #5C5C5C;
     --black-400: #4A4A4A;
     --black-500: #373737;
 
     --blue-500: #007bff;
+    --blue-700: #0062cc;
+    --blue-800: #0060cc;
 
+    --cyan-100: #d6f7f9;
+    --cyan-200: #b9f0e6;
     --cyan-500: #11ceea;
     --cyan-600: #11c3df;
     --cyan-700: #10b7d1;
+    --cyan-800: #10a9c2;
+    --cyan-950: #0d8f90;
+
 
     --deep-blue-200: #A7AFC4;
     --deep-blue-300: #8391ad;
     --deep-blue-400: #394155;
 
-    --green-200: #AFF9C3;
+    --green-100: #d8f6d9;
+    --green-200: #B5F1B9;
     --green-500: #1d9f26;
+    --green-600: #397a3d;
 
-    --grey-100: #F0F4F8;
+    --grey-100: #f0f4f8;
     --grey-200: #E7EAEF;
     --grey-300: #D7DBE4;
     --grey-400: #E6E6E6;
@@ -31,6 +45,7 @@
     --purple-500: #9352b0;
     --purple-600: #83489e;
 
+    --red-100: #FDE9EE;
     --red-200: #FBD3DC;
     --red-300: #F37A96;
     --red-500: #e01343;
@@ -38,6 +53,7 @@
 
     --white-500: #ffffff;
 
+    --yellow-100: hsl(42, 85%, 95%);
     --yellow-200: #FBE9C9;
     --yellow-500: #f0b037;
     --yellow-600: #FFA500;
@@ -195,12 +211,38 @@ button,
 }
 
 /* ** Input Fields ** */
-input {
+input,
+select {
     border       : 2px solid var(--grey-300);
     border-radius: .25em;
     color        : var(--deep-blue-400);
     outline      : 0;
     padding      : 0.5em;
+}
+
+/* Basic Table Styling */
+table {
+    border-collapse: collapse;
+    width          : 100%;
+}
+
+th {
+    color      : var(--deep-blue-200);
+    font-weight: 600;
+    padding    : .5em;
+}
+
+td {
+    padding       : 1em .5em;
+    vertical-align: middle;
+}
+
+tr {
+    border-bottom: 1px solid var(--grey-200);
+}
+
+tbody tr:last-child {
+    border: 0;
 }
 
 /* ===== Home Page ===== */
@@ -663,13 +705,18 @@ input:focus {
     display         : flex;
     max-width       : 100vw;
     min-height      : 100vh;
-
+    overflow-x      : hidden;
 }
 
 .dashboard-container {
-    width      : 100%;
     margin-left: 21em;
+    overflow   : auto;
     transition : all 0.3s ease-in-out;
+    width      : 100%;
+}
+
+.dashboard-content-container {
+    padding: 3em clamp(1rem, 5vw, 15vw);
 }
 
 /* >>> SideBar Component <<< */
@@ -954,10 +1001,6 @@ input:focus {
 
 /* >>> DashboardHome Component <<< */
 
-.dashboard-content-container {
-    padding: 3em 15vh;
-}
-
 .dashboard-content {
     max-width : 100em;
     overflow-x: hidden;
@@ -1082,6 +1125,262 @@ input:focus {
     width : 3em;
 }
 
+/* >>> Appointments Page <<< */
+#appointments {
+    width: 100%;
+}
+
+.appointments-content {
+    background-color: var(--white-500);
+    max-width       : 90em;
+    overflow        : auto;
+    width           : 100%;
+}
+
+.appointments-content .btn-icon {
+    height: 1.35em;
+    width : 1.35em;
+}
+
+.appointments-table-container {
+    overflow-x: auto;
+    width     : 100%;
+}
+
+.appointments-table {
+    white-space: nowrap;
+    width      : 100%;
+}
+
+.serial-no-cell,
+.appointment-name-cell {
+    white-space: nowrap;
+}
+
+.appointments-table p:not(.small-text) {
+    font-size: .95em;
+}
+
+.appointments-table th,
+.appointments-table td {
+    min-width: fit-content;
+}
+
+.date-time-th {
+    white-space: nowrap;
+}
+
+.appointments-table td {
+    padding: 1.25em .5em;
+}
+
+.appointments-content .badge,
+.appoinment-modal .badge {
+    border-radius: 0.25em;
+    font-size    : .9em;
+    font-weight  : 600;
+    padding      : 0.4em .75em;
+}
+
+.paid-badge,
+.completed-badge {
+    background-color: var(--green-100);
+    color           : var(--green-600);
+}
+
+.unpaid-badge {
+    background-color: var(--red-100);
+    color           : var(--red-600);
+}
+
+.pending-badge {
+    background-color: var(--yellow-100);
+    color           : var(--yellow-600);
+}
+
+.appointments-table td button {
+    padding: .35em .5em .5em .5em;
+}
+
+.appointments-table td button:hover {
+    background-color: var(--grey-100);
+}
+
+
+table .profile-photo {
+    height: 2.75em;
+    width : 2.75em;
+}
+
+table .profile-photo img {
+    border-radius: 50%;
+    height       : 100%;
+    object-fit   : cover;
+    width        : 100%;
+}
+
+/* >>> AppointmentModal Component <<< */
+
+.appointment-modal-content {
+    position        : absolute;
+    max-width       : 40em;
+    width           : 100%;
+    background-color: var(--white-500);
+    border-radius   : 0.5em;
+    padding         : 1.75em;
+    margin-right    : -50%;
+    left            : 50%;
+    right           : auto;
+    top             : 50%;
+    transform       : translate(-50%, -50%);
+    box-shadow      : 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+    border          : 0;
+}
+
+.appointment-modal-header h5 {
+    color: var(--blue-800);
+}
+
+/* Appointment Modal Close Button */
+.appointment-modal-header .icon {
+    color     : var(--deep-blue-200);
+    cursor    : pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.appointment-modal-header .icon:hover {
+    color: var(--deep-blue-300);
+}
+
+.appointment-meta {
+    background-image: linear-gradient(to right, var(--aqua-100), var(--cyan-100));
+}
+
+.appointment-id-icon,
+.booking-date-icon {
+    align-items    : center;
+    border-radius  : .25em;
+    display        : flex;
+    height         : 2.5em;
+    justify-content: center;
+    width          : 2.5em;
+}
+
+.appointment-id-icon .icon,
+.booking-date-icon .icon {
+    height      : 1.75em;
+    stroke-width: 1.75px;
+    width       : 1.75em;
+}
+
+.appointment-id-icon {
+    background-color: var(--aqua-200);
+    color           : var(--aqua-500);
+}
+
+.appointment-id-info .small-text {
+    color: var(--aqua-800);
+}
+
+.booking-date-info .small-text {
+    color: var(--cyan-800);
+}
+
+.appointment-id-info .appointment-id-value {
+    color      : var(--aqua-950);
+    font-weight: 600;
+}
+
+.booking-date-info .booking-date-value {
+    color      : var(--cyan-950);
+    font-weight: 600;
+}
+
+.booking-date-icon {
+    background-color: var(--cyan-200);
+    color           : var(--cyan-500);
+}
+
+.appointment-info-form fieldset {
+    display       : flex;
+    flex-direction: column;
+    gap           : .5em;
+}
+
+.appointment-info-form fieldset input,
+.appointment-info-form fieldset select {
+    border-width: 1.75px;
+}
+
+.appointment-info-form fieldset input:disabled,
+.appointment-info-form fieldset select:disabled {
+    background-color: var(--grey-100);
+}
+
+.appointment-date-time-group fieldset {
+    flex     : 1;
+    min-width: fit-content;
+}
+
+.appointment-details .doctor-info,
+.appointment-details .patient-info {
+    flex     : 1;
+    min-width: fit-content;
+}
+
+.appointment-details .doctor-info-header p,
+.appointment-details .patient-info-header p {
+    font-weight: 600;
+}
+
+.appointment-details .doctor-info-header .icon,
+.appointment-details .patient-info-header .icon {
+    height: 1.25em;
+    width : 1.25em;
+}
+
+.appointment-details .doctor-info .name,
+.appointment-details .patient-info .name {
+    font-size: 1em;
+}
+
+.appointment-details .doctor-info-header {
+    color: var(--blue-700);
+}
+
+.appointment-details .patient-info-header {
+    color: var(--green-600);
+}
+
+.appointment-details .patient-info .blood-icon {
+    color : var(--red-500);
+    height: 1.25em;
+    width : 1.25em;
+}
+
+.appoinment-modal .profile-photo {
+    height: 2.75em;
+    width : 2.75em;
+}
+
+.appoinment-modal .profile-photo img {
+    border-radius: 50%;
+    height       : 100%;
+    object-fit   : cover;
+    width        : 100%;
+}
+
+.appoinment-modal .modal-actions button {
+    align-items: center;
+    display    : flex;
+    gap        : .5em;
+}
+
+.appoinment-modal .modal-actions button .icon {
+    height: 1.25em;
+    width : 1.25em;
+}
+
 /* Animations */
 
 /* Flash Animation */
@@ -1165,11 +1464,28 @@ input:focus {
     .quick-actions {
         flex: 1;
     }
+
+    .serial-no-cell,
+    .appointment-name-cell {
+        white-space: normal;
+    }
+
+    .appointment-modal-content {
+        width                     : 90vw;
+        overflow-x                : hidden;
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scrolling on iOS */
+    }
 }
 
 @media (max-width: 625px) {
     .user-detail {
         display: none;
+    }
+
+    .appointment-modal-content {
+        max-height: 90vh;
+        overflow-y: auto;
     }
 }
 
@@ -1226,9 +1542,13 @@ input:focus {
         height : max-content;
         padding: .4em;
     }
+
+    .modal-actions button span {
+        display: none;
+    }
 }
 
-@media (max-width: 435px) {
+@media (max-width: 425px) {
     .profile-panel {
         margin-right: .5em;
     }
@@ -1239,5 +1559,12 @@ input:focus {
 
     .dashboard-metrics {
         min-width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .appointment-meta {
+        flex-direction: column;
+        gap           : 1em;
     }
 }
