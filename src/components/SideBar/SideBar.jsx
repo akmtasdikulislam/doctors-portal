@@ -66,7 +66,7 @@ const SideBar = ({ isMobileSidebarOpen, toggleMobileSidebar }) => {
       */
 
       // Get current window width and compare with tablet breakpoints (576px - 1024px) to determine responsive behavior
-      if (window.innerWidth < 1024 && window.innerWidth > 576) {
+      if (window.innerWidth <= 1024 && window.innerWidth > 576) {
         // Check if viewport width is within tablet range (between 576px and 1024px)
         // Collapse sidebar for tablet view to optimize screen space and improve user experience
         setIsCollapsed(true); // Update state to collapse sidebar when in tablet view for better layout
@@ -111,14 +111,14 @@ const SideBar = ({ isMobileSidebarOpen, toggleMobileSidebar }) => {
         {/* Container for navigation links with flex layout */}
         <div className="sidebar-links">
           {/* Group container for navigation links */}
-          <NavLink to="/dashboard" className="sidebar-link">
+          <NavLink to="/dashboard" className="sidebar-link" end>
             {/* Dashboard navigation link */}
             <Home className="sidebar-link-icon" />
             {/* Home icon for dashboard */}
             <span className="sidebar-link-text">Dashboard</span>
             {/* Dashboard link text */}
           </NavLink>
-          <NavLink to="/dashboard/appointments" className="sidebar-link">
+          <NavLink to="appointments" className="sidebar-link">
             {/* Appointments navigation link */}
             <Calendar className="sidebar-link-icon" />
             {/* Calendar icon for appointments */}
