@@ -151,8 +151,8 @@ doctors-portal/
 |   │   │   |   └── NotificationPanel.jsx
 │   │   |   ├── Patients
 |   │   │   |   └── Patients.jsx
-│   │   |   ├── Profile
-|   │   │   |   └── Profile.jsx
+│   │   |   ├── ProfileModal
+|   │   │   |   └── ProfileModal.jsx
 │   │   |   ├── ProfilePanel
 |   │   │   |   └── ProfilePanel.jsx
 │   │   |   ├── ProgressiveMetrics
