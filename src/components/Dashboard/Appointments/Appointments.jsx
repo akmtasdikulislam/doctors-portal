@@ -269,7 +269,7 @@ const Appointments = () => {
                       {appointment.treatment}
                     </td>
                     {/* Shows treatment type */}
-                    <td>
+                    <td className="date-time-cell">
                       {/* Date and time cell */}
                       <p className="m-0">
                         {formatDate(
@@ -352,7 +352,7 @@ const Appointments = () => {
                     <td>
                       {/* Actions cell */}
                       <button
-                        className="btn view-appointment-btn me-2" // View button styling
+                        className="btn action-btn me-2" // View button styling
                         title="View Appointment" // Button tooltip
                         onClick={() => openModal(index)} // Click handler to open appointment details
                       >
