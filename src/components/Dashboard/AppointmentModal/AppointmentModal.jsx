@@ -91,27 +91,22 @@ const AppointmentModal = ({ isOpen, closeModal, appointment }) => {
       preventScroll={true} // Prevents background content scrolling while modal is open for better focus
     >
       <div className="appoinment-modal">
-        {" "}
         {/* Main container for the appointment modal content */}
         <div className="appointment-modal-header d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
-          {" "}
           {/* Header section with title and close button */}
           <h5 className="m-0">Appointment Information</h5> {/* Modal title */}
           <X className="icon" onClick={closeModal} />{" "}
           {/* Close button with X icon */}
         </div>
         <div className="appointment-meta p-3 d-flex align-items-center justify-content-between">
-          {" "}
           {/* Container for appointment metadata (ID and booking date) */}
           <div className="appointment-id d-flex align-items-center gap-2">
-            {" "}
             {/* Appointment ID section */}
             <div className="appointment-id-icon">
               <ClipboardPlus className="icon" />{" "}
               {/* Icon for appointment ID section */}
             </div>
             <div className="appointment-id-info">
-              {" "}
               {/* Container for appointment ID text */}
               <p className="m-0 small-text">Appointment ID</p>{" "}
               {/* Label for appointment ID */}
@@ -120,13 +115,11 @@ const AppointmentModal = ({ isOpen, closeModal, appointment }) => {
             </div>
           </div>
           <div className="booking-date d-flex align-items-center gap-2">
-            {" "}
             {/* Booking date section */}
             <div className="booking-date-icon">
               <Clock className="icon" /> {/* Clock icon for booking date */}
             </div>
             <div className="booking-date-info">
-              {" "}
               {/* Container for booking date information */}
               <p className="m-0 small-text">Booking Date</p>{" "}
               {/* Label for booking date */}
@@ -138,20 +131,16 @@ const AppointmentModal = ({ isOpen, closeModal, appointment }) => {
           </div>
         </div>
         <div className="appointment-status d-sm-none d-flex align-items-center justify-content-between mt-4 ">
-          {" "}
           {/* Mobile-only appointment status display */}
           <p className="m-0">Appointment Status:</p> {/* Status label */}
           <div className={`badge ${appointment.status.toLowerCase()}-badge`}>
-            {" "}
             {/* Dynamic status badge */}
             {appointment.status} {/* Status text */}
           </div>
         </div>
         <div className="appointment-details my-3">
-          {" "}
           {/* Main container for appointment details */}
           <form className="appointment-info-form">
-            {" "}
             {/* Form for appointment information */}
             <fieldset>
               <label>Treatment:</label> {/* Treatment input label */}
@@ -164,7 +153,6 @@ const AppointmentModal = ({ isOpen, closeModal, appointment }) => {
               {/* Treatment input field - enabled only in edit mode */}
             </fieldset>
             <div className="appointment-date-time-group d-flex flex-wrap align-items-center justify-content-around gap-4 mt-2">
-              {" "}
               {/* Container for date and time inputs */}
               <fieldset>
                 <label>Date:</label> {/* Date input label */}
@@ -186,7 +174,6 @@ const AppointmentModal = ({ isOpen, closeModal, appointment }) => {
                   {...register("time")}
                   defaultValue={appointment.schedule.time}
                 >
-                  {" "}
                   {/* Time slot selection dropdown - enabled only in edit mode */}
                   <option value="">Select Time</option> {/* Default option */}
                   <option value="08.00 AM - 09.00 AM">
@@ -206,26 +193,21 @@ const AppointmentModal = ({ isOpen, closeModal, appointment }) => {
             </div>
           </form>
           <div className="d-flex flex-wrap align-items-center justify-content-between gap-4 my-4">
-            {" "}
             {/* Container for doctor and patient info cards */}
             <div className="p-3 border rounded-1 doctor-info">
-              {" "}
               {/* Doctor information card */}
               <div className="doctor-info-header d-flex align-items-center gap-2 mb-3">
-                {" "}
                 {/* Doctor card header */}
                 <Stethoscope className="icon" /> {/* Doctor section icon */}
                 <p className="m-0">Doctor Information</p> {/* Section title */}
               </div>
               <div className="d-flex align-items-center gap-3">
-                {" "}
                 {/* Doctor details container */}
                 <div className="profile-photo doctor-image">
                   <img src={appointment.doctor.image} alt="" />{" "}
                   {/* Doctor's profile photo */}
                 </div>
                 <div className="doctor-details">
-                  {" "}
                   {/* Doctor's text information */}
                   <p className="m-0 name">{appointment.doctor.name}</p>{" "}
                   {/* Doctor's name */}
@@ -238,23 +220,19 @@ const AppointmentModal = ({ isOpen, closeModal, appointment }) => {
               </div>
             </div>
             <div className="p-3 border rounded-1 patient-info">
-              {" "}
               {/* Patient information card */}
               <div className="patient-info-header d-flex align-items-center gap-2 mb-3">
-                {" "}
                 {/* Patient card header */}
                 <User className="icon" /> {/* Patient section icon */}
                 <p className="m-0">Patient Information</p> {/* Section title */}
               </div>
               <div className="d-flex align-items-center gap-3">
-                {" "}
                 {/* Patient details container */}
                 <div className="profile-photo patient-image">
                   <img src={appointment.patient.image} alt="" />{" "}
                   {/* Patient's profile photo */}
                 </div>
                 <div className="patient-details">
-                  {" "}
                   {/* Patient's text information */}
                   <p className="m-0 name">{appointment.patient.name}</p>{" "}
                   {/* Patient's name */}
@@ -270,10 +248,8 @@ const AppointmentModal = ({ isOpen, closeModal, appointment }) => {
             </div>
           </div>
           <div className="payment-status p-3 border rounded-1">
-            {" "}
             {/* Payment status section */}
             <div className="d-flex align-items-center justify-content-between gap-3 mb-2">
-              {" "}
               {/* Payment status header */}
               <h6>Payment Status:</h6> {/* Status label */}
               {appointment.payment.status === "Paid" ? (
@@ -285,7 +261,6 @@ const AppointmentModal = ({ isOpen, closeModal, appointment }) => {
             </div>
             {appointment.payment.status === "Paid" ? (
               <div className="d-flex flex-wrap align-items-center justify-content-between">
-                {" "}
                 {/* Paid payment details */}
                 <div>
                   <p className="m-0 small-text text-secondary">
@@ -328,7 +303,6 @@ const AppointmentModal = ({ isOpen, closeModal, appointment }) => {
           </div>
         </div>
         <div className="modal-actions d-flex flex-wrap align-items-center justify-content-between gap-2 mt-4">
-          {" "}
           {/* Modal action buttons container */}
           <button className="btn btn-danger">
             <Trash2 className="icon" />
@@ -337,7 +311,6 @@ const AppointmentModal = ({ isOpen, closeModal, appointment }) => {
           </button>{" "}
           {/* Delete appointment button */}
           <div className="d-flex align-items-center gap-2">
-            {" "}
             {/* Edit/Save buttons container */}
             {isEditing ? (
               <>
