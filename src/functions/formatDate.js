@@ -66,8 +66,6 @@ function formatDate(date, format = "full") {
     "Dec",
   ];
 
-  console.log(date);
-
   // Extract the day component and ensure it's two digits with leading zero if needed
   const day = date.getDate().toString().padStart(2, "0");
   // Convert numeric month to its corresponding name using the months array
