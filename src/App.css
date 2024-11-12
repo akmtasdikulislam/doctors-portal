@@ -1569,6 +1569,19 @@ table .profile-photo img {
     width           : 100%;
 }
 
+/* >>> Doctors Page <<< */
+#doctors .speciality {
+    color: var(--blue-700);
+}
+
+.schedule-row {
+    background-color: var(--grey-400);
+}
+
+.delete-btn {
+    color: var(--red-500);
+}
+
 /* Animations */
 
 /* Flash Animation */
