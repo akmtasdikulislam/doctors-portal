@@ -147,6 +147,10 @@ doctors-portal/
 |   │   │   |   └── DashboardHome.jsx
 │   │   |   ├── DashboardMetrics
 |   │   │   |   └── DashboardMetrics.jsx
+│   │   |   ├── DoctorProfileModal
+|   │   │   |   └── DoctorProfileModal.jsx
+│   │   |   ├── Doctors
+|   │   │   |   └── Doctors.jsx
 │   │   |   ├── NotificationPanel
 |   │   │   |   └── NotificationPanel.jsx
 │   │   |   ├── Patients
@@ -209,6 +213,7 @@ doctors-portal/
 │   │   |   └── handleSignUp.js
 │   │   ├── formatDate.js
 │   │   ├── formatErrorMessage.js
+│   │   ├── generatedId.js
 │   ├── pages/
 │   │   ├── Appointment/
 │   │   |   └── Appointment.jsx
