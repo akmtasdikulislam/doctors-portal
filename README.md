@@ -153,10 +153,12 @@ doctors-portal/
 |   │   │   |   └── Doctors.jsx
 │   │   |   ├── NotificationPanel
 |   │   │   |   └── NotificationPanel.jsx
-│   │   |   ├── Patients
-|   │   │   |   └── Patients.jsx
 │   │   |   ├── PatientProfileModal
 |   │   │   |   └── PatientProfileModal.jsx
+│   │   |   ├── Patients
+|   │   │   |   └── Patients.jsx
+│   │   |   ├── Payments
+|   │   │   |   └── Payments.jsx
 │   │   |   ├── ProfilePanel
 |   │   │   |   └── ProfilePanel.jsx
 │   │   |   ├── ProgressiveMetrics
