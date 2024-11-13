@@ -1583,6 +1583,24 @@ table .profile-photo img {
     color: var(--red-500);
 }
 
+/* >>> Messages Page <<< */
+.message-sender {
+    border-radius: 50%;
+    height       : 3em;
+    overflow     : hidden;
+    width        : 3em;
+}
+
+.message-sender img {
+    height    : 100%;
+    object-fit: cover;
+    width     : 100%;
+}
+
+.message-text {
+    font-size: 1em;
+}
+
 /* Animations */
 
 /* Flash Animation */
