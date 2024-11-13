@@ -151,6 +151,8 @@ doctors-portal/
 |   │   │   |   └── DoctorProfileModal.jsx
 │   │   |   ├── Doctors
 |   │   │   |   └── Doctors.jsx
+│   │   |   ├── Messages
+|   │   │   |   └── Messages.jsx
 │   │   |   ├── NotificationPanel
 |   │   │   |   └── NotificationPanel.jsx
 │   │   |   ├── PatientProfileModal
