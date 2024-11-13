@@ -1410,7 +1410,8 @@ table .profile-photo img {
     width           : 100%;
 }
 
-.patient-table-container {
+.patient-table-container,
+.payment-table-container {
     width   : 100%;
     overflow: auto;
 }
@@ -1816,6 +1817,10 @@ table .profile-photo img {
     .dashboard-metrics {
         min-width: 100%;
     }
+
+    .payment-table-container .amount-cell {
+        display: none;
+    }
 }
 
 @media (max-width: 375px) {
@@ -1844,6 +1849,10 @@ table .profile-photo img {
 
     .profile-photo-column.editing .profile-info input {
         margin-bottom: 0 !important;
+    }
+
+    .payment-table-container .status-cell {
+        display: none;
     }
 
 }
