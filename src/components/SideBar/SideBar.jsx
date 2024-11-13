@@ -34,7 +34,8 @@ import { NavLink } from "react-router-dom"; // Component for navigation with act
 import {
   Calendar, // Used for appointments section navigation icon
   CreditCard, // Used for payments section navigation icon
-  Home, // Used for dashboard section navigation icon
+  Home,
+  MessageSquare, // Used for dashboard section navigation icon
   PanelLeftClose, // Used for sidebar collapse button icon
   Settings, // Used for settings section navigation icon
   Stethoscope, // Used for doctors section navigation icon
@@ -145,6 +146,13 @@ const SideBar = ({ isMobileSidebarOpen, toggleMobileSidebar }) => {
             {/* Credit card icon for payments */}
             <span className="sidebar-link-text">Payments</span>
             {/* Payments link text */}
+          </NavLink>
+          <NavLink to="/dashboard/messages" className="sidebar-link">
+            {/* Messages navigation link */}
+            <MessageSquare className="sidebar-link-icon" />
+            {/* Chat icon for messages */}
+            <span className="sidebar-link-text">Messages</span>
+            {/* Messages link text */}
           </NavLink>
           <NavLink to="/dashboard/settings" className="sidebar-link">
             {/* Settings navigation link */}
