@@ -169,6 +169,8 @@ doctors-portal/
 |   │   │   |   └── QuickActions.jsx
 │   │   |   ├── RecentActivity
 |   │   │   |   └── RecentActivity.jsx
+│   │   |   ├── Settings
+|   │   │   |   └── Settings.jsx
 │   │   |   ├── Tasks
 |   │   │   |   └── Tasks.jsx
 │   │   ├── DentalCareService/
