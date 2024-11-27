@@ -170,6 +170,8 @@ doctors-portal/
 │   │   |   ├── RecentActivity
 |   │   │   |   └── RecentActivity.jsx
 │   │   |   ├── Settings
+|   │   │   |   ├── PreferencesSettings
+|   |   │   │   |   └── PreferencesSettings.jsx
 |   │   │   |   └── Settings.jsx
 │   │   |   ├── Tasks
 |   │   │   |   └── Tasks.jsx
