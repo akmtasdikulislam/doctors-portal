@@ -174,6 +174,8 @@ doctors-portal/
 |   |   │   │   |   └── PreferencesSettings.jsx
 |   │   │   |   ├── PrivacySettings
 |   |   │   │   |   └── PrivacySettings.jsx
+|   │   │   |   ├── ProfileSettings
+|   |   │   │   |   └── ProfileSettings.jsx
 |   │   │   |   └── Settings.jsx
 │   │   |   ├── Tasks
 |   │   │   |   └── Tasks.jsx
