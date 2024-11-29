@@ -240,7 +240,7 @@ const ProfileSettings = ({ userData }) => {
             )}
           </div>
         </div>
-        <div className="profile-details p-4 w-100">
+        <div className="profile-details p-md-4 w-100">
           {/* Main form container for all profile details */}
           <h6 className="m-0 mb-3">Patient Information</h6>
           {/* Section header for patient details */}

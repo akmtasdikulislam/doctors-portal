@@ -71,7 +71,7 @@ const Settings = () => {
   return (
     <section
       id="settings" // Unique identifier for the settings section for DOM manipulation and styling
-      className="mx-auto d-xxl-flex flex-column align-items-center justify-content-center gap-4" // Centers content horizontally, applies flex layout on xxl screens with vertical stacking, centers items and adds spacing between them
+      className="mx-auto d-flex flex-column align-items-center justify-content-center gap-4" // Centers content horizontally, applies flex layout on xxl screens with vertical stacking, centers items and adds spacing between them
     >
       {/* Main section heading with responsive margin */}
       <h3 className="align-self-start mb-3 mb-xl-0">Settings</h3>
@@ -87,8 +87,7 @@ const Settings = () => {
         {/* Renders preferences settings component for user customization options */}
       </div>
       <div className="patient-container p-4 rounded-3">
-        {" "}
-        /{/* ontainer for security settings with padding and rounded corners */}
+        {/* ontainer for security settings with padding and rounded corners */}
         <SecuritySettings />
         {/* Renders security settings component for authentication and password management */}
       </div>
@@ -97,14 +96,14 @@ const Settings = () => {
         <PrivacySettings />
         {/* Renders privacy settings component for data sharing preferences */}
       </div>
-      <div className="d-flex align-items-center justify-content-between w-100">
+      <div className="d-flex flex-wrap align-items-center justify-content-between w-100 settings-footer gap-3">
         {/* Footer container with flex layout for button alignment and full width */}
-        <button className="btn btn-danger">
+        <button className="btn btn-danger d-flex align-items-center gap-2">
           {/* Destructive action button styled in red */}
           <Trash2 className="icon" /> Delete Patient
           {/* Delete button with trash icon from Lucide */}
         </button>
-        <button className="btn btn-secondary">
+        <button className="btn btn-secondary d-flex align-items-center gap-2">
           {/* Secondary action button for saving settings */}
           <SaveAll className="icon" /> Save All Settings
           {/* Save button with save icon from Lucide */}
