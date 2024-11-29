@@ -1601,6 +1601,139 @@ table .profile-photo img {
     font-size: 1em;
 }
 
+/* >>> Settings Page <<< */
+.preferences-settings {
+    width: 100%;
+}
+
+.appearance-settings,
+.notification-settings,
+.data-privacy-settings,
+.data-management-settings,
+.account-security-settings,
+.password-settings {
+    flex-grow: 1;
+}
+
+.setting-option {
+    align-items    : center;
+    display        : flex;
+    gap            : 1em;
+    justify-content: space-between;
+    width          : 100%;
+}
+
+.settings-option-title {
+    align-items: center;
+    display    : flex;
+    font-size  : 1em;
+    font-weight: 600;
+    gap        : .5em;
+}
+
+.settings-option-title .icon {
+    width: 1.15em;
+}
+
+.toggle-switch-container input {
+    display: none;
+}
+
+.toggle-switch {
+    background-color: var(--grey-200);
+    border-radius   : 3em;
+    cursor          : pointer;
+    height          : 1.75em;
+    position        : relative;
+    transition      : all 0.3s ease-in-out;
+    width           : 3.25em;
+}
+
+.toggle-switch::after {
+    background-color: var(--white-500);
+    border-radius   : 50%;
+    content         : '';
+    height          : 1.4em;
+    left            : 27%;
+    position        : absolute;
+    top             : 50%;
+    transform       : translate(-50%, -50%);
+    transition      : all 0.3s ease-in-out;
+    width           : 1.4em;
+}
+
+.toggle-switch-container input:checked+.toggle-switch {
+    background-color: var(--black-500);
+}
+
+.toggle-switch-container input:checked+.toggle-switch::after {
+    left: 73%;
+}
+
+.font-size-setting-option fieldset,
+.language-setting-option fieldset,
+.language-setting-option fieldset select {
+    width: 100%;
+}
+
+.slider-container {
+    height  : 2em;
+    padding : 10px 0;
+    position: relative;
+    width   : 100%;
+}
+
+.slider-track {
+    background   : var(--grey-100);
+    border-radius: .5em;
+    height       : .5em;
+    position     : absolute;
+    top          : 50%;
+    transform    : translateY(-50%);
+    width        : 100%;
+}
+
+.slider-track::before {
+    background   : var(--black-500);
+    border-radius: .5em;
+    content      : '';
+    height       : 100%;
+    left         : 0;
+    position     : absolute;
+    width        : var(--progress);
+}
+
+.slider-thumb {
+    background   : var(--white-500);
+    border       : 2px solid var(--black-500);
+    border-radius: 50%;
+    cursor       : pointer;
+    height       : 20px;
+    position     : absolute;
+    top          : 50%;
+    transform    : translate(-50%, -50%);
+    transition   : background 0.2s;
+    width        : 20px;
+}
+
+.slider-thumb:hover {
+    background: var(--grey-300);
+}
+
+.slider-thumb:focus {
+    box-shadow: 0 0 0 3px rgba(54, 57, 62, 0.3);
+    outline   : none;
+}
+
+#settings .btn-outline-dark {
+    border: 1.75px solid var(--grey-200);
+    color : var(--black-500);
+}
+
+#settings .btn-outline-dark:hover {
+    color: var(--white-500);
+}
+
 /* Animations */
 
 /* Flash Animation */
@@ -1871,6 +2004,25 @@ table .profile-photo img {
 
     .payment-table-container .status-cell {
         display: none;
+    }
+
+    .settings-footer button {
+        flex-grow      : 1;
+        justify-content: center;
+    }
+
+    #settings .profile-photo-column.editing {
+        height    : max-content;
+        min-height: 50%;
+        padding   : 1em 0;
+    }
+
+    #settings .profile-photo-column.editing .profile-photo-column-content {
+        flex-direction: column !important;
+    }
+
+    #settings .profile-photo-column.editing .profile-info {
+        align-items: center;
     }
 
 }
