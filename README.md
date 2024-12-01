@@ -144,6 +144,8 @@ doctors-portal/
 │   │   |   ├── DashboardHeader
 |   │   │   |   └── DashboardHeader.jsx
 │   │   |   ├── DashboardHome
+|   │   │   |   ├── DoctorView
+|   |   │   │   |   └── DoctorDashboardHome.jsx
 |   │   │   |   └── DashboardHome.jsx
 │   │   |   ├── DashboardMetrics
 |   │   │   |   └── DashboardMetrics.jsx
