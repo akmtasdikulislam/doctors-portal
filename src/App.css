@@ -2036,6 +2036,20 @@ table .profile-photo img {
         align-items: center;
     }
 
+    .upcoming-appointments {
+        min-width: 100%;
+    }
+
+    .upcoming-appointments-content {
+        overflow: auto;
+        width   : 100%;
+    }
+
+    .upcoming-appointments-content table td {
+        white-space: nowrap;
+        width      : max-content;
+    }
+
 }
 
 @media (max-width: 320px) {
