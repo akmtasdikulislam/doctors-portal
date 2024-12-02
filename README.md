@@ -152,6 +152,7 @@ doctors-portal/
 │   │   |   ├── Doctors
 |   │   │   |   └── Doctors.jsx
 │   │   |   ├── DoctorView
+|   │   │   |   ├── DoctorAppointments.jsx
 |   │   │   |   └── DoctorDashboardHome.jsx
 │   │   |   ├── Messages
 |   │   │   |   └── Messages.jsx
