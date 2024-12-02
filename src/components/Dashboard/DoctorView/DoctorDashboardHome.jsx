@@ -27,11 +27,11 @@
 import { Activity, Calendar, MessageSquare, Users } from "lucide-react"; // Icons used in metrics cards for visual representation
 
 /** Dashboard Component Imports */
-import DashboardMetrics from "../../DashboardMetrics/DashboardMetrics"; // Displays individual metric cards with icons and values
-import ProgressiveMetrics from "../../ProgressiveMetrics/ProgressiveMetrics"; // Shows statistical metrics with progress indicators
-import RecentActivity from "../../RecentActivity/RecentActivity"; // Displays recent system activities and notifications
-import Tasks from "../../Tasks/Tasks"; // Shows list of pending tasks and to-dos
-import UpcomingAppointments from "../../UpcomingAppointments/UpcomingAppointments";
+import DashboardMetrics from "../DashboardMetrics/DashboardMetrics"; // Displays individual metric cards with icons and values
+import ProgressiveMetrics from "../ProgressiveMetrics/ProgressiveMetrics"; // Shows statistical metrics with progress indicators
+import RecentActivity from "../RecentActivity/RecentActivity"; // Displays recent system activities and notifications
+import Tasks from "../Tasks/Tasks"; // Shows list of pending tasks and to-dos
+import UpcomingAppointments from "../UpcomingAppointments/UpcomingAppointments";
 
 const DoctorDashboardHome = () => {
   document.title = "Dashboard | Doctors Portal";
