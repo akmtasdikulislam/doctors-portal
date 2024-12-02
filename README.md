@@ -144,8 +144,6 @@ doctors-portal/
 │   │   |   ├── DashboardHeader
 |   │   │   |   └── DashboardHeader.jsx
 │   │   |   ├── DashboardHome
-|   │   │   |   ├── DoctorView
-|   |   │   │   |   └── DoctorDashboardHome.jsx
 |   │   │   |   └── DashboardHome.jsx
 │   │   |   ├── DashboardMetrics
 |   │   │   |   └── DashboardMetrics.jsx
@@ -153,6 +151,8 @@ doctors-portal/
 |   │   │   |   └── DoctorProfileModal.jsx
 │   │   |   ├── Doctors
 |   │   │   |   └── Doctors.jsx
+│   │   |   ├── DoctorView
+|   │   │   |   └── DoctorDashboardHome.jsx
 │   │   |   ├── Messages
 |   │   │   |   └── Messages.jsx
 │   │   |   ├── NotificationPanel
