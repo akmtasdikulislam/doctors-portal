@@ -164,6 +164,8 @@ doctors-portal/
 |   │   │   |   └── Patients.jsx
 │   │   |   ├── Payments
 |   │   │   |   └── Payments.jsx
+│   │   |   ├── Prescription
+|   │   │   |   └── Prescription.jsx
 │   │   |   ├── ProfilePanel
 |   │   │   |   └── ProfilePanel.jsx
 │   │   |   ├── ProgressiveMetrics
