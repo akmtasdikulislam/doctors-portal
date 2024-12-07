@@ -176,6 +176,8 @@ doctors-portal/
 |   │   │   |   └── QuickActions.jsx
 │   │   |   ├── RecentActivity
 |   │   │   |   └── RecentActivity.jsx
+│   │   |   ├── RecentPrescriptions
+|   │   │   |   └── RecentPrescriptions.jsx
 │   │   |   ├── Settings
 |   │   │   |   ├── PreferencesSettings
 |   |   │   │   |   └── PreferencesSettings.jsx
