@@ -15,10 +15,18 @@
  * - addNewPatient: Controls visibility of add new patient form
  * - isOpen: Controls visibility of patient profile modal
  *
+ * Context Usage:
+ * - Utilizes AppContext to access user data and permissions
+ *
  * Data Structure:
  * - Uses patientsData array containing detailed patient objects
- * - Each patient object includes personal info, demographics, contact details,
- *   emergency contacts, and appointment history
+ * - Each patient object includes:
+ *   - Personal information (name, profile image)
+ *   - Demographics (age, gender, blood group, etc.)
+ *   - Contact information
+ *   - Emergency contact details
+ *   - Join date and last visit information
+ *   - Current medical condition
  *
  * UI Components:
  * - Patient list table with sortable columns
@@ -27,19 +35,23 @@
  * - Action buttons for viewing patient details
  */
 
-/** React and hooks imports */
-import { useState } from "react"; // Import useState hook to manage component state for modal visibility and selected patient
+/** React related imports */
+import { useContext, useState } from "react"; // For managing modal visibility, selected patient state and accessing app-wide context
+import { AppContext } from "../../../App"; // For accessing user data and permissions throughout the component
 
-/** Components imports */
-import PatientProfileModal from "../PatientProfileModal/PatientProfileModal"; // Import ProfileModal component to display patient details in a modal
+/** Component imports */
+import PatientProfileModal from "../PatientProfileModal/PatientProfileModal"; // Modal component for displaying/editing patient details and adding new patients
 
 /** Icon imports */
-import { FileUser, Plus } from "lucide-react"; // Import icons for view patient and add new patient buttons
+import { FileUser, Plus } from "lucide-react"; // FileUser icon for view patient button, Plus icon for add new patient button
 
 const Patients = () => {
   document.title = "Patients - Dashboard | Doctors Portal"; // Set the browser tab title for the Patients page in the Dashboard
 
-  const [selectedPatient, setSelectedPatient] = useState(0); // Initialize state to track the currently selected patient for viewing in the modal, starting with the first patient (index 0)
+  const [selectedPatient, setSelectedPatient] = useState(0);
+  // Initialize state to track the currently selected patient for viewing in the modal, starting with the first patient (index 0)
+
+  const { user } = useContext(AppContext); // Extract user object from AppContext to access user-specific data like role, permissions, and preferences throughout the component
 
   const [addNewPatient, setAddNewPatient] = useState(false); // Initialize state to control the visibility of the "Add New Patient" modal dialog (true = visible, false = hidden)
 
@@ -67,6 +79,8 @@ const Patients = () => {
         address: "456 Oak Avenue, Springfield, USA",
       },
       joinDate: "15 Jan 2024",
+      lastVisit: "10 Feb 2024",
+      condition: "Hypertension Treatment",
       emergencyContact: {
         name: "Mary Doe",
         relationship: "Sister",
@@ -102,6 +116,8 @@ const Patients = () => {
         address: "789 Maple Street, Riverside, USA",
       },
       joinDate: "20 Jan 2024",
+      lastVisit: "5 Feb 2024",
+      condition: "Migraine Treatment",
       emergencyContact: {
         name: "Robert Wilson",
         relationship: "Father",
@@ -137,6 +153,8 @@ const Patients = () => {
         address: "123 Elm Street, Maplewood, USA",
       },
       joinDate: "22 Jan 2024",
+      lastVisit: "15 Feb 2024",
+      condition: "Diabetes Management",
       emergencyContact: {
         name: "Lisa Chen",
         relationship: "Wife",
@@ -172,6 +190,8 @@ const Patients = () => {
         address: "567 Birch Lane, Oakville, USA",
       },
       joinDate: "25 Jan 2024",
+      lastVisit: "12 Feb 2024",
+      condition: "Asthma Treatment",
       emergencyContact: {
         name: "James Brown",
         relationship: "Brother",
@@ -207,6 +227,8 @@ const Patients = () => {
         address: "890 Pine Street, Willowbrook, USA",
       },
       joinDate: "27 Jan 2024",
+      lastVisit: "8 Feb 2024",
+      condition: "Arthritis Treatment",
       emergencyContact: {
         name: "Susan Kim",
         relationship: "Mother",
@@ -242,6 +264,8 @@ const Patients = () => {
         address: "234 Oak Street, Riverdale, USA",
       },
       joinDate: "28 Jan 2024",
+      lastVisit: "14 Feb 2024",
+      condition: "Anxiety Treatment",
       emergencyContact: {
         name: "Carlos Martinez",
         relationship: "Father",
@@ -277,6 +301,8 @@ const Patients = () => {
         address: "567 Maple Avenue, Springfield, USA",
       },
       joinDate: "30 Jan 2024",
+      lastVisit: "11 Feb 2024",
+      condition: "Back Pain Treatment",
       emergencyContact: {
         name: "Jennifer Anderson",
         relationship: "Wife",
@@ -312,6 +338,8 @@ const Patients = () => {
         address: "789 Cedar Street, Oakwood, USA",
       },
       joinDate: "1 Feb 2024",
+      lastVisit: "13 Feb 2024",
+      condition: "Allergy Treatment",
       emergencyContact: {
         name: "Maria Garcia",
         relationship: "Mother",
@@ -401,15 +429,15 @@ const Patients = () => {
                 </th>
                 <th className="d-none d-xl-table-cell">
                   {/* Join date column, hidden on smaller screens */}
-                  Join Date
+                  {user.category === "admin" ? "Join Date" : "Last Visit"}
                 </th>
                 <th className="patient-table-appointments-cell">
                   {/* Appointments column */}
-                  Appointments
+                  {user.category === "admin" ? "Appointments" : "Condition"}
                 </th>
                 <th>
-                  Actions
                   {/* Actions column for interactive buttons */}
+                  Actions
                 </th>
               </tr>
             </thead>
@@ -419,9 +447,12 @@ const Patients = () => {
                   patient,
                   index // Maps through patient data to create table rows
                 ) => (
+                  // Table row for each patient
                   <tr key={index}>
-                    {/* Table row for each patient */}
-                    <td>{index + 1}</td> {/* Display serial number */}
+                    <td>
+                      {/* Display serial number */}
+                      {index + 1}
+                    </td>
                     <td>
                       <div className="d-flex align-items-center gap-3">
                         {/* Container for patient basic info */}
@@ -470,29 +501,44 @@ const Patients = () => {
                       {/* Patient's phone */}
                     </td>
                     <td className="d-none d-xl-table-cell">
+                      {/* Join date, hidden on smaller screens */}
                       {patient.joinDate}
                     </td>
-                    {/* Join date, hidden on smaller screens */}
                     <td className="patient-table-appointments-cell">
-                      {/* Appointments information */}
-                      <div className="d-flex align-items-center gap-3">
-                        <div className="d-flex flex-column align-items-center gap-1">
-                          <h4 className="m-0">{patient.appointments.total}</h4>
-                          {/* Total appointments count */}
-                          <p className="m-0 small-text text-secondary">Total</p>
-                          {/* Total label */}
-                        </div>
-                        <div className="d-flex flex-column gap-2">
-                          <div className="badge paid-badge">
-                            {patient.appointments.status.paid} Paid
+                      {user.category === "admin" ? ( // Conditional rendering based on user role - shows appointments for admin, condition for others
+                        <div className="d-flex align-items-center gap-3">
+                          {/* Flex container for appointments info with centered alignment and spacing */}
+                          <div className="d-flex flex-column align-items-center gap-1">
+                            {/* Column container for total appointments count */}
+                            <h4 className="m-0">
+                              {/* Heading for total appointments number with no margin */}
+                              {patient.appointments.total}
+                              {/* Displays total number of appointments for this patient */}
+                            </h4>
+                            <p className="m-0 small-text text-secondary">
+                              {/* Small gray text label below total count */}
+                              Total
+                              {/* Label text indicating the number above is total appointments */}
+                            </p>
                           </div>
-                          {/* Paid appointments count */}
-                          <div className="badge unpaid-badge">
-                            {patient.appointments.status.unpaid} Unpaid
+                          <div className="d-flex flex-column gap-2">
+                            {/* Column container for paid/unpaid appointment badges */}
+                            <div className="badge paid-badge">
+                              {/* Badge showing number of paid appointments with green styling */}
+                              {patient.appointments.status.paid} Paid
+                              {/* Displays count of paid appointments with "Paid" label */}
+                            </div>
+
+                            <div className="badge unpaid-badge">
+                              {/* Badge showing number of unpaid appointments with red styling */}
+                              {patient.appointments.status.unpaid} Unpaid
+                              {/* Displays count of unpaid appointments with "Unpaid" label */}
+                            </div>
                           </div>
-                          {/* Unpaid appointments count */}
                         </div>
-                      </div>
+                      ) : (
+                        <p className="m-0">{patient.condition}</p> // For non-admin users (Doctors), shows patient's current medical condition
+                      )}
                     </td>
                     <td>
                       <button
