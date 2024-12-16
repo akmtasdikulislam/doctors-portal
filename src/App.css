@@ -1047,7 +1047,8 @@ input:focus {
 .tasks,
 .progressive-metrics,
 .quick-actions,
-.upcoming-appointments {
+.upcoming-appointments,
+.recent-prescriptions {
     background-color: var(--white-500);
     border          : 1px solid var(--grey-300);
     border-radius   : 0.5em;
@@ -1745,6 +1746,46 @@ table .profile-photo img {
     color           : var(--blue-800);
 }
 
+/* >>> Medical Records Page (Dashboard) <<< */
+#medical-records {
+    width: 100%;
+}
+
+/* ===== Patients's View ===== */
+/* >>> Upcoming Appointments Component <<< */
+.upcoming-appointments button,
+.recent-prescriptions button {
+    white-space: nowrap;
+}
+
+/* >>> Recent Prescriptions Component <<< */
+.medicine-icon {
+    color: var(--green-500);
+    width: 1.25em;
+}
+
+.prescription-table-container {
+    overflow: auto;
+}
+
+.prescription-table-container td,
+.prescription-table-container th {
+    width      : max-content;
+    white-space: nowrap;
+}
+
+.active-badge {
+    background-color: var(--green-100);
+    color           : var(--green-600);
+}
+
+.completed-badge {
+    background-color: var(--grey-100);
+    color           : var(--black-300);
+}
+
+
+
 /* Animations */
 
 /* Flash Animation */
@@ -2036,18 +2077,28 @@ table .profile-photo img {
         align-items: center;
     }
 
-    .upcoming-appointments {
+    .upcoming-appointments,
+    .recent-prescriptions {
         min-width: 100%;
     }
 
-    .upcoming-appointments-content {
+    .upcoming-appointments-content,
+    .recent-prescriptions-content {
         overflow: auto;
         width   : 100%;
     }
 
-    .upcoming-appointments-content table td {
+    .upcoming-appointments-content table td,
+    .recent-prescriptions table td {
         white-space: nowrap;
         width      : max-content;
+    }
+
+    /* ===== Patients's View ===== */
+    /* >>> Upcoming Appointments Component <<< */
+    .upcoming-appointments button span,
+    .recent-prescriptions button span {
+        display: none;
     }
 
 }
