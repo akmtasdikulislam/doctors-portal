@@ -183,8 +183,8 @@ doctors-portal/
 |   |   │   │   |   └── PreferencesSettings.jsx
 |   │   │   |   ├── PrivacySettings
 |   |   │   │   |   └── PrivacySettings.jsx
-|   │   │   |   ├── ProfileSettings
-|   |   │   │   |   └── ProfileSettings.jsx
+|   │   │   |   ├── PatientProfileSettings
+|   |   │   │   |   └── PatientProfileSettings.jsx
 |   │   │   |   ├── SecuritySettings
 |   |   │   │   |   └── SecuritySettings.jsx
 |   │   │   |   └── Settings.jsx

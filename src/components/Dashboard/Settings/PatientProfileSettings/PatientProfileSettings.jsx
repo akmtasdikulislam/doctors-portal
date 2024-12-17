@@ -1,5 +1,5 @@
 /*
- * ProfileSettings Component
+ * PatientProfileSettings Component
  *
  * A comprehensive profile management component that allows users to view and edit their personal information.
  *
@@ -45,7 +45,7 @@ import { PenBox, Save } from "lucide-react"; // Icons used in buttons and UI ele
 import formatDate from "../../../../functions/formatDate"; // Helper function to format date strings
 import FormError from "../../../FormError/FormError";
 
-const ProfileSettings = ({ userData }) => {
+const PatientProfileSettings = ({ userData }) => {
   const [isEditing, setIsEditing] = useState(false); // State variable to track whether the form is in edit mode or view mode
   const [uploadedPhoto, setUploadedPhoto] = useState(null); // State variable to store and manage the uploaded profile photo URL
   const {
@@ -505,7 +505,7 @@ const ProfileSettings = ({ userData }) => {
   );
 };
 
-ProfileSettings.propTypes = {
+PatientProfileSettings.propTypes = {
   isOpen: PropTypes.bool, // Controls the visibility state of the modal (true = visible, false = hidden)
   addNew: PropTypes.bool, // Determines if modal is in "add new profile" mode (true) or "edit profile" mode (false)
   closeModal: PropTypes.func, // Function to handle closing the modal and cleanup operations
@@ -544,4 +544,4 @@ ProfileSettings.propTypes = {
 };
 
 // Export the component for use in other parts of the application
-export default ProfileSettings;
+export default PatientProfileSettings;
