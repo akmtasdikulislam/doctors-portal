@@ -179,6 +179,8 @@ doctors-portal/
 │   │   |   ├── RecentPrescriptions
 |   │   │   |   └── RecentPrescriptions.jsx
 │   │   |   ├── Settings
+|   │   │   |   ├── DoctorProfileSettings
+|   |   │   │   |   └── DoctorProfileSettings.jsx
 |   │   │   |   ├── PreferencesSettings
 |   |   │   │   |   └── PreferencesSettings.jsx
 |   │   │   |   ├── PrivacySettings
