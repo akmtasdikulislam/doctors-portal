@@ -242,7 +242,14 @@ const PatientProfileSettings = ({ userData }) => {
         </div>
         <div className="profile-details p-md-4 w-100">
           {/* Main form container for all profile details */}
-          <h6 className="m-0 mb-3">Patient Information</h6>
+          <div className="d-flex align-items-center justify-content-between">
+            <h6 className="m-0 mb-3">Personal Information</h6>
+            <div
+              className={`badge ${userData.category}-badge ms-auto text-capitalize`}
+            >
+              {userData.category}
+            </div>
+          </div>
           {/* Section header for patient details */}
           <div className="d-flex flex-wrap align-items-center justify-content-between gap-4">
             {/* Two-column layout for form fields */}
@@ -540,6 +547,7 @@ PatientProfileSettings.propTypes = {
       phone: PropTypes.string, // Emergency contact's phone number
       address: PropTypes.string, // Emergency contact's address
     }),
+    category: PropTypes.string,
   }),
 };
 
