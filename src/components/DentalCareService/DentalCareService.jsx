@@ -18,7 +18,7 @@ import dentalCare from "../../assets/images/treatment.png"; // Importing dental 
 const DentalCareService = () => {
   return (
     // Wrapper section for the dental care service component
-    <section className="dental-care-service-section my-md-5 py-md-5">
+    <section className="dental-care-service-section my-5 py-md-5">
       {/* Container for the content with responsive width and centering */}
       <div className="w-75 mx-auto row my-md-5">
         {/* Left column for the image, takes up 4 columns on medium screens */}
@@ -31,7 +31,7 @@ const DentalCareService = () => {
           />
         </div>
         {/* Right column for text content, takes up 7 columns with left margin on medium screens */}
-        <div className="col-md-7 ms-md-5 align-self-center">
+        <div className="col-md-7 ms-md-5 align-self-center mt-md-0 mt-5">
           {/* Main heading for the service description */}
           <h2>Exceptional Dental Care, on Your Terms</h2>
           {/* Paragraph with secondary text color and vertical margins */}

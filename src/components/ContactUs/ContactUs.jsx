@@ -62,7 +62,7 @@ const ContactUs = () => {
       </div>
       {/* Contact form with flex layout and gap between elements */}
       <form
-        className="contact-us-form mt-5 col-md-3 d-flex flex-column gap-3"
+        className="contact-us-form mt-5 col-md-3 col-10 d-flex flex-column gap-3"
         onSubmit={handleSubmit((data) => sendEmail(data))}
       >
         {/* Email input field with validation */}

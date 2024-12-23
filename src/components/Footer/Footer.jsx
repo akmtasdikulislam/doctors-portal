@@ -16,7 +16,7 @@
 const Footer = () => {
   return (
     // Render the footer section with padding
-    <footer className="footer-section p-5">
+    <footer className="footer-section p-sm-5">
       {/* Container for footer links with responsive layout */}
       <div className="row px-5 pb-5 my-5">
         {/* Column for Services section */}
@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
         </div>
         {/* Column for Oral Health section */}
-        <div className="col-md-4">
+        <div className="col-md-4 my-5">
           {/* Oral Health heading */}
           <h6 className="text-secondary mb-3">ORAL HEALTH</h6>
           {/* Flex container for oral health links */}

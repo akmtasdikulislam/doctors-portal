@@ -33,10 +33,12 @@ import { NavLink } from "react-router-dom"; // Component for navigation with act
 // ** Icon Imports **
 import {
   Calendar, // Used for appointments section navigation icon
-  CreditCard, // Used for payments section navigation icon
+  CreditCard,
+  FileText, // Used for payments section navigation icon
   Home,
   MessageSquare, // Used for dashboard section navigation icon
-  PanelLeftClose, // Used for sidebar collapse button icon
+  PanelLeftClose,
+  Pill, // Used for sidebar collapse button icon
   Settings, // Used for settings section navigation icon
   Stethoscope, // Used for doctors section navigation icon
   Users, // Used for patients section navigation icon
@@ -49,6 +51,10 @@ import logo from "../../assets/logo/logo.png"; // Logo image used in sidebar hea
 const SideBar = ({ isMobileSidebarOpen, toggleMobileSidebar }) => {
   // State management for sidebar collapse state
   const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const user = {
+    category: "patient",
+  };
 
   // Effect hook to handle responsive sidebar collapse based on window width
   useEffect(() => {
@@ -133,13 +139,32 @@ const SideBar = ({ isMobileSidebarOpen, toggleMobileSidebar }) => {
             <span className="sidebar-link-text">Patients</span>
             {/* Patients link text */}
           </NavLink>
-          <NavLink to="/dashboard/doctors" className="sidebar-link">
-            {/* Doctors navigation link */}
-            <Stethoscope className="sidebar-link-icon" />
-            {/* Stethoscope icon for doctors */}
-            <span className="sidebar-link-text">Doctors</span>
-            {/* Doctors link text */}
-          </NavLink>
+          {user.category === "admin" ? (
+            <NavLink to="/dashboard/doctors" className="sidebar-link">
+              {/* Doctors navigation link */}
+              <Stethoscope className="sidebar-link-icon" />
+              {/* Stethoscope icon for doctors */}
+              <span className="sidebar-link-text">Doctors</span>
+              {/* Doctors link text */}
+            </NavLink>
+          ) : (
+            <NavLink to="/dashboard/medical-records" className="sidebar-link">
+              {/* Doctors navigation link */}
+              <FileText className="sidebar-link-icon" />
+              {/* Stethoscope icon for doctors */}
+              <span className="sidebar-link-text">Medical Records</span>
+              {/* Doctors link text */}
+            </NavLink>
+          )}
+          {user.category === "patient" && (
+            <NavLink to="/dashboard/prescriptions" className="sidebar-link">
+              {/* Doctors navigation link */}
+              <Pill className="sidebar-link-icon" />
+              {/* Stethoscope icon for doctors */}
+              <span className="sidebar-link-text">Prescriptions</span>
+              {/* Doctors link text */}
+            </NavLink>
+          )}
           <NavLink to="/dashboard/payments" className="sidebar-link">
             {/* Payments navigation link */}
             <CreditCard className="sidebar-link-icon" />

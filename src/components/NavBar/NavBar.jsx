@@ -37,7 +37,7 @@ const NavBar = () => {
       {/* Fluid container for full-width navbar */}
       <div className="container-fluid">
         {/* Brand logo link to home page */}
-        <Link className="navbar-brand ms-5" to="/">
+        <Link className="navbar-brand ms-sm-5" to="/">
           {/* Logo image */}
           <img src={logo} alt="Doctors Portal" className="logo" />
         </Link>
@@ -59,28 +59,32 @@ const NavBar = () => {
           {/* Navigation links container */}
           <div className="navbar-nav ms-auto">
             {/* Home page link */}
-            <NavLink className="nav-link me-5" aria-current="page" to="/">
+            <NavLink
+              className="nav-link me-2 me-xl-5"
+              aria-current="page"
+              to="/"
+            >
               Home
             </NavLink>
             {/* About page link */}
-            <NavLink className="nav-link me-5" to="/about">
+            <NavLink className="nav-link me-2 me-xl-5" to="/about">
               About
             </NavLink>
             {/* Appointment page link */}
-            <NavLink className="nav-link me-5" to="/appointment">
+            <NavLink className="nav-link me-2 me-xl-5" to="/appointment">
               Appointment
             </NavLink>
             {/* Reviews page link */}
-            <NavLink className="nav-link me-5" to="/reviews">
+            <NavLink className="nav-link me-2 me-xl-5" to="/reviews">
               Reviews
             </NavLink>
             {/* Contact page link */}
-            <NavLink className="nav-link me-5" to="/contact">
+            <NavLink className="nav-link me-2 me-xl-5" to="/contact">
               Contact Us
             </NavLink>
-            {!user ? (
+            {!user.token ? (
               // Conditional rendering: If user is not logged in, show login link
-              <NavLink className="nav-link me-5" to="/login">
+              <NavLink className="nav-link me-2 me-xl-5" to="/login">
                 {/* Text for the login link */}
                 Login
               </NavLink>

@@ -24,9 +24,13 @@ const MakeAppointment = () => {
       {/* Container for appointment content with responsive width and centering */}
       <div className="appointment-container w-75 mx-md-auto d-flex align-items-center">
         {/* Doctor image with responsive sizing */}
-        <img src={doctor} alt="Doctor" className="appointment-img img-fluid" />
+        <img
+          src={doctor}
+          alt="Doctor"
+          className="appointment-img img-fluid d-md-block d-none"
+        />
         {/* Container for appointment details with responsive column width and alignment */}
-        <div className="appointment-details col-md-5 ms-md-auto">
+        <div className="appointment-details col-md-5 ms-md-auto ms-5">
           {/* Small heading for appointment section */}
           <h6 className="sub-heading">Appointment</h6>
           {/* Main heading for appointment section with white text and top margin */}

@@ -61,7 +61,7 @@ const Testimonials = () => {
         <h3>What Our Patients Says</h3>
         {/* Main heading for the testimonials section */}
       </div>
-      <div className="testimonial-container mx-5 p-5 d-flex align-items-center justify-content-center gap-5 my-5">
+      <div className="testimonial-container mx-lg-5 p-lg-5 py-5 d-flex flex-wrap align-items-center justify-content-center gap-sm-5 gap-4 my-5">
         {/* Container for testimonial cards with flexbox layout and spacing */}
         {testimonials.map(
           (

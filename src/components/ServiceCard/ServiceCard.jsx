@@ -21,7 +21,7 @@ const ServiceCard = ({ service }) => {
     // Container for the service card with Bootstrap column class
     <div className="service-card-container col-md-4 ">
       {/* Inner container for the service card with text alignment and padding */}
-      <div className="service-card text-center py-md-5 px-md-5">
+      <div className="service-card text-center py-5 px-5">
         {/* Display the service image with alt text for accessibility */}
         <img className="service-image" src={service.image} alt={service.name} />
         {/* Display the service name in an h6 heading with margin */}

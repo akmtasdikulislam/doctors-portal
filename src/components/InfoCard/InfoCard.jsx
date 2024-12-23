@@ -21,7 +21,7 @@ import PropTypes from "prop-types"; // Import PropTypes for prop type checking a
 // Define the InfoCard functional component that receives 'info' prop
 const InfoCard = ({ info }) => {
   return (
-    <div className="col-md-4">
+    <div className="col-md-4 col-11">
       {/* Wrapper div with Bootstrap column class */}
       <div
         className={`info-card d-flex justify-content-center align-items-center info-${info.background} text-white`}

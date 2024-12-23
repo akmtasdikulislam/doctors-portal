@@ -22,7 +22,7 @@ const TestimonialCard = ({ testimonialData }) => {
     // Container for the testimonial card with responsive column width
     <div className="testimonial-card-container col-md-4 mt-md-5">
       {/* Inner container for the testimonial card with padding */}
-      <div className="testimonial-card p-5">
+      <div className="testimonial-card p-sm-5 p-4">
         {/* Paragraph to display the testimonial review text with bottom margin */}
         <p className="mb-5">{testimonialData.review}</p>
         {/* Container for author information with flex layout */}

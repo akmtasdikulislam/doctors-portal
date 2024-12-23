@@ -54,9 +54,9 @@ const Header = () => {
     <header className="d-flex flex-column justify-content-between">
       {/* Main header container with flex layout */}
       <NavBar /> {/* Renders the navigation bar component */}
-      <section className="row hero-section d-flex align-items-center">
+      <section className="row hero-section d-flex flex-md-row flex-column-reverse gap-md-0 gap-4 align-items-center my-md-0 my-5">
         {/* Hero section with flex layout for alignment */}
-        <div className="col-4 offset-1">
+        <div className="col-md-4 col-11 offset-md-1">
           {/* Left column for text content */}
           <h1>Your New Smile Starts Here</h1>
           {/* Main heading for the hero section */}
@@ -68,13 +68,13 @@ const Header = () => {
           <button className="btn btn-primary">Get Started</button>
           {/* Call-to-action button */}
         </div>
-        <div className="col-5 offset-1">
+        <div className="col-md-5 col-11 offset-md-1">
           {/* Right column for image */}
           <img className="img-fluid" src={chair} alt="Chair" />
           {/* Responsive image of a dental chair */}
         </div>
       </section>
-      <section className="row contact-information-section container-md mx-md-auto">
+      <section className="row contact-information-section container-lg mx-auto d-md-block d-flex align-items-center justify-content-center gap-3 mb-5 mb-md-0">
         {/* Contact information section with responsive container */}
         {contactInformation.map((info, index) => (
           // Maps through contact information array
