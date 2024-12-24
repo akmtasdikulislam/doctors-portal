@@ -9,7 +9,6 @@
     --aqua-800: #11a888;
     --aqua-950: #0e8263;
 
-
     --black-300: #5C5C5C;
     --black-400: #4A4A4A;
     --black-500: #373737;
@@ -26,7 +25,6 @@
     --cyan-700: #10b7d1;
     --cyan-800: #10a9c2;
     --cyan-950: #0d8f90;
-
 
     --deep-blue-200: #A7AFC4;
     --deep-blue-300: #8391ad;
@@ -373,6 +371,7 @@ header::after {
     /* UI Soft */
     box-shadow   : var(--box-shadow);
     min-height   : 21.5em;
+    min-width    : fit-content;
 }
 
 .testimonial-card .author-photo {
@@ -1884,6 +1883,19 @@ table .profile-photo img {
 
     .caption-text {
         font-size: 0.625em;
+    }
+
+    header {
+        height: max-content;
+    }
+
+    .contact-information-section {
+        width  : 100%;
+        padding: 0;
+    }
+
+    .services-container {
+        width: 100% !important;
     }
 
     .dashboard-content-container {
