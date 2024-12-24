@@ -67,7 +67,7 @@ const BookAppointment = ({ selectedDate }) => {
         Available Services on {selectedDate}
         {/* Display the selected date for appointments */}
       </h2>
-      <div className="row my-5">
+      <div className="row my-5 d-flex justify-content-center align-items-center flex-wrap flex-grow-1 flex-shrink-1">
         {/* Container for appointment cards with top and bottom margin */}
         {availableAppointments.map((appointment) => (
           // Map through the availableAppointments array to render individual appointment cards

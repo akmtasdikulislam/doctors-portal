@@ -42,20 +42,20 @@ const AppointmentHeader = ({ selectedDate, setSelectedDate }) => {
   };
 
   return (
-    <section className="row hero-section d-flex align-items-center my-5 py-5">
+    <section className="row hero-section d-flex flex-md-row flex-column-reverse align-items-center justify-content-md-start justify-content-center my-5 py-5 mx-md-0 mx-2">
       {/* Hero section with flex layout for alignment */}
-      <div className="col-4 offset-1">
+      <div className="col-md-4 offset-md-1 d-md-block d-flex flex-column align-items-center justify-content-center">
         {/* Left column for text content */}
-        <h2 className="sub-heading">Appointment</h2>
+        <h2 className="sub-heading d-md-block d-none">Appointment</h2>
         {/* Main heading for the hero section */}
         <Calendar
           onChange={handleDateChange} // Event handler for when a date is selected
           value={selectedDate} // The currently selected date
           calendarType="hebrew" // Sets the calendar type to Hebrew
-          className="mt-5" // Adds margin-top for spacing
+          className="mt-5 flex-shrink-1" // Adds margin-top for spacing
         />
       </div>
-      <div className="col-5 offset-1">
+      <div className="col-md-5 offset-md-1">
         {/* Right column for image */}
         <img className="img-fluid" src={chair} alt="Chair" />
         {/* Responsive image of a dental chair */}

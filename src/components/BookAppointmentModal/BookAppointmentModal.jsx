@@ -38,6 +38,7 @@ const customStyles = {
     top: "50%", // Position from top edge
     transform: "translate(-50%, -50%)", // Center the modal
     width: "28em", // Set fixed width
+    maxWidth: "95vw", // Limit maximum width for responsiveness
   },
   overlay: {
     backgroundColor: "rgba(0, 0, 0, 0.5)", // Set semi-transparent black background for modal overlay
